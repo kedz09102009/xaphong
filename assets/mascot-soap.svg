@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" role="img" aria-labelledby="title desc">
+  <title id="title">Soap mascot</title><desc id="desc">A friendly cream soap bar wearing a flowing blue scarf and a golden star.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f4f8ff"/></linearGradient>
+    <linearGradient id="scarf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9edcff"/><stop offset="1" stop-color="#4ca9e3"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#367da7" flood-opacity=".22"/></filter>
+  </defs>
+  <g filter="url(#shadow)" stroke="#17466d" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M105 63 Q112 36 145 38 L284 49 Q321 53 324 88 L309 230 Q305 267 267 270 L111 258 Q72 255 75 215 Z" fill="url(#body)"/>
+    <path d="M83 164 Q151 143 218 162 Q272 178 315 151 L307 197 Q247 222 190 199 Q127 179 78 207 Z" fill="url(#scarf)"/>
+    <path d="M104 189 Q75 222 42 241 Q76 260 132 225 L147 203 Z" fill="#74c6f1"/>
+    <path d="M271 183 Q306 214 350 230 Q342 258 284 231 L254 211 Z" fill="#65b7e8"/>
+    <path d="M151 110 Q158 94 170 108" fill="none" stroke-width="7"/>
+    <path d="M241 109 Q249 94 260 107" fill="none" stroke-width="7"/>
+    <ellipse cx="165" cy="128" rx="8" ry="13" fill="#173f63" stroke="none"/>
+    <ellipse cx="250" cy="128" rx="8" ry="13" fill="#173f63" stroke="none"/>
+    <path d="M189 150 Q207 171 226 150" fill="none" stroke-width="7"/>
+    <ellipse cx="130" cy="150" rx="17" ry="9" fill="#f6a9b8" stroke="none" opacity=".8"/>
+    <ellipse cx="282" cy="150" rx="17" ry="9" fill="#f6a9b8" stroke="none" opacity=".8"/>
+    <path d="M207 183 l11 -17 12 17 20 3 -15 14 3 20 -20 -10 -18 10 3 -20 -15 -14z" fill="#ffd66e" stroke="#c28d2c" stroke-width="5"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"><path d="M57 85 Q27 56 47 34"/><path d="M347 88 Q379 62 369 39"/></g>
+  <g fill="#ffd66e" stroke="#fff" stroke-width="5"><path d="M54 17 l7 13 15 2 -11 10 3 15 -14 -7 -13 7 2 -15 -11 -10 15 -2z"/><path d="M364 4 l5 10 12 2 -9 8 2 12 -10 -5 -11 5 2 -12 -9 -8 12 -2z"/></g>
+</svg>

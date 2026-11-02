@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 430" role="img" aria-labelledby="title desc">
+  <title id="title">Soap and friends</title><desc id="desc">Soap mascot holding a little book, accompanied by a water drop, an oil drop, and a molecule friend.</desc>
+  <defs>
+    <linearGradient id="soap" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#edf6ff"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6e0ff"/><stop offset="1" stop-color="#4aa8e0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#4389b3" flood-opacity=".2"/></filter>
+  </defs>
+  <g filter="url(#shadow)" stroke="#17466d" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Soap bar -->
+    <path d="M160 85 Q168 51 205 54 L365 65 Q401 70 402 108 L390 301 Q386 337 349 340 L176 326 Q139 323 140 285 Z" fill="url(#soap)"/>
+    <path d="M145 190 Q211 166 274 190 Q338 214 396 184 L390 226 Q328 255 263 230 Q202 208 142 238 Z" fill="url(#blue)"/>
+    <path d="M158 215 Q125 259 79 275 Q105 305 170 252 L190 229 Z" fill="#78c9f0"/>
+    <path d="M340 216 Q379 247 424 257 Q418 288 358 262 L324 240 Z" fill="#69bce9"/>
+    <ellipse cx="225" cy="145" rx="9" ry="14" fill="#173f63" stroke="none"/>
+    <ellipse cx="316" cy="151" rx="9" ry="14" fill="#173f63" stroke="none"/>
+    <path d="M245 177 Q270 201 295 180" fill="none" stroke-width="7"/>
+    <ellipse cx="191" cy="172" rx="17" ry="9" fill="#f4a8b8" stroke="none"/>
+    <ellipse cx="348" cy="179" rx="17" ry="9" fill="#f4a8b8" stroke="none"/>
+    <path d="M271 224 l12 -18 12 18 21 3 -16 14 4 21 -21 -11 -19 11 3 -21 -16 -14z" fill="#ffd66e" stroke="#c28d2c" stroke-width="5"/>
+    <!-- Open book -->
+    <path d="M214 267 Q251 247 280 268 L280 326 Q245 308 214 330 Z" fill="#fff7d9" stroke="#397eaa" stroke-width="5"/>
+    <path d="M280 268 Q312 248 349 266 L349 328 Q314 309 280 326 Z" fill="#e4f5ff" stroke="#397eaa" stroke-width="5"/>
+    <path d="M280 268 L280 326" fill="none" stroke-width="4"/>
+    <path d="M230 285 Q250 278 264 286 M230 299 Q250 292 264 300 M295 284 Q317 277 335 285 M295 298 Q317 291 335 299" fill="none" stroke="#78b9dc" stroke-width="4"/>
+  </g>
+  <!-- Water drop friend -->
+  <g filter="url(#shadow)" stroke="#3c8fbd" stroke-width="6" stroke-linejoin="round">
+    <path d="M77 63 C77 63 35 112 35 143 A42 42 0 0 0 119 143 C119 112 77 63 77 63Z" fill="#aee4ff"/>
+    <ellipse cx="65" cy="139" rx="5" ry="8" fill="#17466d" stroke="none"/><ellipse cx="91" cy="139" rx="5" ry="8" fill="#17466d" stroke="none"/>
+    <path d="M68 157 Q78 168 89 157" fill="none" stroke-width="4"/>
+  </g>
+  <!-- Oil drop friend -->
+  <g filter="url(#shadow)" stroke="#c28d2c" stroke-width="6" stroke-linejoin="round">
+    <path d="M505 55 C505 55 462 108 462 139 A43 43 0 0 0 548 139 C548 108 505 55 505 55Z" fill="#ffe09b"/>
+    <ellipse cx="492" cy="137" rx="5" ry="8" fill="#604b2c" stroke="none"/><ellipse cx="518" cy="137" rx="5" ry="8" fill="#604b2c" stroke="none"/>
+    <path d="M494 155 Q505 165 517 155" fill="none" stroke-width="4"/>
+  </g>
+  <!-- Molecule bubbles -->
+  <g stroke="#3f8db8" stroke-width="6" fill="#d8f2ff">
+    <path d="M448 322 L490 285 L535 328 L574 288" fill="none" stroke-linecap="round"/>
+    <circle cx="448" cy="322" r="18"/><circle cx="490" cy="285" r="18"/><circle cx="535" cy="328" r="18"/><circle cx="574" cy="288" r="18"/>
+  </g>
+  <g fill="#ffd66e" stroke="#fff" stroke-width="5"><path d="M134 35 l7 14 16 2 -12 10 3 16 -14 -8 -14 8 3 -16 -12 -10 16 -2z"/><path d="M418 81 l6 12 13 2 -10 9 2 13 -11 -6 -11 6 2 -13 -10 -9 13 -2z"/><path d="M579 185 l5 10 12 2 -9 8 2 12 -10 -5 -10 5 2 -12 -9 -8 12 -2z"/></g>
+</svg>

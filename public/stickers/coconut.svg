@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 190" role="img" aria-labelledby="title desc">
+  <title id="title">Dầu dừa</title><desc id="desc">A smiling coconut half with white flesh and a small bottle of coconut oil.</desc>
+  <g stroke="#815a38" stroke-width="7" stroke-linejoin="round">
+    <path d="M22 112 Q23 46 96 30 Q164 15 206 79 Q218 107 197 135 Q130 174 62 148 Q32 139 22 112Z" fill="#8b5c3d"/>
+    <path d="M32 105 Q39 53 99 41 Q157 31 193 82 Q205 104 185 126 Q125 153 68 134 Q42 126 32 105Z" fill="#fffdf4" stroke="#e2d5be"/>
+    <ellipse cx="106" cy="92" rx="7" ry="10" fill="#17466d" stroke="none"/><ellipse cx="151" cy="91" rx="7" ry="10" fill="#17466d" stroke="none"/><path d="M111 111 Q128 124 145 110" fill="none" stroke="#17466d" stroke-width="5"/>
+  </g>
+  <g stroke="#3c8ebd" stroke-width="6" stroke-linejoin="round">
+    <path d="M186 72 h45 v90 q0 10 -10 10 h-25 q-10 0 -10 -10Z" fill="#d8f2ff"/>
+    <path d="M194 55 h29 v18 h-29z" fill="#86c9ef"/><path d="M201 43 h15 v13 h-15z" fill="#fff"/>
+    <path d="M193 112 h31 v31 h-31z" fill="#fff5d5" stroke="#cda64e" stroke-width="3"/>
+  </g>
+  <g fill="#e9b94f" stroke="#fff" stroke-width="4"><path d="M49 18 l6 12 14 2 -10 9 2 14 -12 -7 -12 7 2 -14 -10 -9 14 -2z"/><path d="M232 23 l5 10 11 2 -8 7 2 11 -10 -5 -9 5 2 -11 -8 -7 11 -2z"/></g>
+</svg>

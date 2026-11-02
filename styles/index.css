@@ -1,0 +1,2327 @@
+:root {
+  --soap-bg: #171918;
+  --soap-panel: #222725;
+  --soap-panel-2: #292f2c;
+  --soap-cream: #f2eee5;
+  --soap-muted: #b8b6ad;
+  --soap-orange: #e58a4b;
+  --soap-line: rgba(242, 238, 229, 0.16);
+}
+
+.slidev-layout {
+  background: var(--soap-bg);
+  color: var(--soap-cream);
+  font-family: Inter, "Aptos", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  padding: 2.45rem 3rem 1.8rem;
+  box-sizing: border-box;
+}
+.slidev-layout h1, .slidev-layout h2, .slidev-layout h3,
+.slidev-layout p { color: inherit; }
+.slidev-layout p { line-height: 1.48; }
+.slidev-layout h1 {
+  font-size: 2.85rem;
+  line-height: 1.08;
+  font-weight: 760;
+  letter-spacing: -.045em;
+  margin: 0 0 .65rem;
+}
+.slidev-layout h1::after {
+  content: ""; display: block; width: 3.2rem; height: 4px;
+  background: var(--soap-orange); margin-top: .85rem; border-radius: 4px;
+}
+.slidev-layout .section-lead {
+  color: var(--soap-muted); font-size: 1.16rem; line-height: 1.45;
+  margin: .15rem 0 1.25rem; max-width: 48rem;
+}
+.slidev-layout .eyebrow {
+  color: var(--soap-orange); font-size: .82rem; font-weight: 750;
+  letter-spacing: .17em; text-transform: uppercase;
+}
+.slidev-layout .bottom-note {
+  color: var(--soap-muted); font-size: .78rem; line-height: 1.35;
+  letter-spacing: .075em; margin-top: .8rem;
+}
+
+/* Cover */
+.slidev-layout .cover, .slidev-layout .closing-slide {
+  min-height: 100%; position: relative; display: flex; flex-direction: column;
+  justify-content: center; overflow: hidden; padding: 1rem .8rem;
+}
+.slidev-layout .report-cover { display: grid; grid-template-columns: 1.1fr .9fr; gap: 1.3rem; align-items: center; }
+.slidev-layout .cover h1, .slidev-layout .closing-slide h1 {
+  font-size: 3.8rem; line-height: 1.02; margin: 1.25rem 0 .9rem; max-width: 42rem;
+}
+.slidev-layout .cover h1::after, .slidev-layout .closing-slide h1::after { display: none; }
+.slidev-layout .cover h1 span, .slidev-layout .closing-slide h1 span { color: var(--soap-orange); }
+.slidev-layout .cover-subtitle { color: var(--soap-muted); font-size: 1.3rem; }
+.slidev-layout .cover-rule { width: 4rem; height: 3px; background: var(--soap-orange); margin: 1.1rem 0; }
+.slidev-layout .cover-meta { color: var(--soap-muted); font-size: .88rem; letter-spacing: .07em; }
+.slidev-layout .cover-meta span { color: var(--soap-orange); padding: 0 .4rem; }
+.slidev-layout .cover-visual { min-height: 19rem; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid var(--soap-line); border-radius: 1.2rem; background: radial-gradient(circle at 50% 45%, rgba(229,138,75,.16), transparent 58%), #202522; padding: 1rem; }
+.slidev-layout .soap-stack { width: 16rem; height: 12rem; position: relative; }
+.slidev-layout .soap-bar { position: absolute; width: 11rem; height: 6rem; border-radius: 1.1rem; transform: rotate(-12deg); box-shadow: 0 1rem 2rem rgba(0,0,0,.22); }
+.slidev-layout .bar-back { background: #987456; left: 3.2rem; top: .5rem; transform: rotate(12deg); }
+.slidev-layout .bar-mid { background: #c5a57d; left: 1.2rem; top: 2.7rem; transform: rotate(-9deg); }
+.slidev-layout .bar-front { background: linear-gradient(135deg,#e5c99f,#b88c61); left: 4rem; top: 4.3rem; transform: rotate(8deg); display: grid; place-items: center; color: #49382b; font-size: .82rem; letter-spacing: .16em; font-weight: 800; }
+.slidev-layout .visual-caption { color: var(--soap-orange); font-size: .82rem; letter-spacing: .12em; font-weight: 750; margin-top: .4rem; }
+.slidev-layout .photo-hint { color: var(--soap-muted); font-size: .82rem; text-align: center; margin-top: .45rem; }
+
+/* Opening question and objectives */
+.slidev-layout .question-layout { display: grid; grid-template-columns: 1.5fr .8fr; gap: 1rem; align-items: stretch; }
+.slidev-layout .question-main { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: 1rem; padding: 1.6rem; }
+.slidev-layout .question-main h2 { font-size: 2.2rem; line-height: 1.15; max-width: 38rem; margin: .8rem 0; }
+.slidev-layout .question-main p { color: var(--soap-muted); line-height: 1.55; max-width: 40rem; }
+.slidev-layout .question-side { display: grid; gap: .7rem; }
+.slidev-layout .mini-stat { display: flex; align-items: center; gap: .8rem; padding: .8rem 1rem; border: 1px solid var(--soap-line); border-radius: .8rem; background: rgba(255,255,255,.025); }
+.slidev-layout .mini-stat strong { color: var(--soap-orange); font-size: 1.55rem; }
+.slidev-layout .mini-stat span { color: var(--soap-muted); font-size: .96rem; }
+.slidev-layout .card-grid { display: grid; gap: 1rem; }
+.slidev-layout .card-grid.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.slidev-layout .info-card { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: 1rem; padding: 1.05rem; min-height: 12rem; position: relative; }
+.slidev-layout .accent-card { border-color: rgba(229,138,75,.65); }
+.slidev-layout .card-number { color: var(--soap-orange); font-size: .82rem; letter-spacing: .08em; font-weight: 750; }
+.slidev-layout .card-icon { color: var(--soap-orange); font-size: 1.8rem; margin: .7rem 0; }
+.slidev-layout .info-card h3 { font-size: 1.22rem; margin: .1rem 0 .45rem; }
+.slidev-layout .info-card p { color: var(--soap-muted); font-size: 1rem; line-height: 1.48; }
+
+/* Ingredients */
+.slidev-layout .materials-layout { display: grid; grid-template-columns: .78fr 1.35fr; gap: 1rem; }
+.slidev-layout .material-primary { min-height: 18rem; background: radial-gradient(circle at 85% 90%,rgba(229,138,75,.2),transparent 38%),var(--soap-panel-2); border: 1px solid var(--soap-line); border-radius: 1rem; padding: 1.35rem; position: relative; overflow: hidden; }
+.slidev-layout .material-primary h2 { font-size: 2.2rem; margin: 1rem 0 .35rem; }
+.slidev-layout .material-primary p { color: var(--soap-muted); max-width: 13rem; font-size: 1.05rem; }
+.slidev-layout .material-mark { position: absolute; right: -.4rem; bottom: -2rem; color: rgba(229,138,75,.17); font-size: 6rem; font-weight: 850; letter-spacing: -.08em; }
+.slidev-layout .materials-list { display: flex; flex-direction: column; gap: .42rem; }
+.slidev-layout .material-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .72rem .9rem; border: 1px solid var(--soap-line); border-radius: .65rem; background: rgba(255,255,255,.025); }
+.slidev-layout .material-row b { color: var(--soap-orange); min-width: 7.8rem; font-size: 1.02rem; }
+.slidev-layout .material-row span { color: var(--soap-muted); text-align: right; font-size: .98rem; line-height: 1.35; }
+
+/* Chemistry */
+.slidev-layout .reaction-panel { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: 1rem; padding: 1.35rem 1.5rem; }
+.slidev-layout .reaction-equation { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .65rem; font-size: 1.55rem; font-weight: 700; margin: 1.5rem 0; }
+.slidev-layout .reaction-symbol { color: var(--soap-muted); }
+.slidev-layout .reaction-arrow { color: var(--soap-orange); font-size: 1.9rem; }
+.slidev-layout .product-pair, .slidev-layout .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.slidev-layout .product-pair > div { border-top: 1px solid var(--soap-orange); padding-top: .6rem; }
+.slidev-layout .product-pair b { display: block; font-size: 1.05rem; }
+.slidev-layout .product-pair span { color: var(--soap-muted); font-size: .9rem; }
+.slidev-layout .concept-grid {
+    display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+   margin-top: 1rem; 
+  }
+.slidev-layout .concept-item { border-left: 2px solid var(--soap-orange); padding: .25rem .8rem; }
+.slidev-layout .concept-item b, .slidev-layout .concept-item span { display: block; }
+.slidev-layout .concept-item span { color: var(--soap-muted); font-size: .94rem; margin-top: .15rem; }
+
+/* Soap cleaning mechanism */
+.slidev-layout .molecule-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: stretch; }
+.slidev-layout .molecule-card { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: 1rem; padding: 1.3rem; display: flex; flex-direction: column; justify-content: center; }
+.slidev-layout .molecule-drawing { display: flex; align-items: center; justify-content: center; min-height: 9rem; }
+.slidev-layout .molecule-tail { display: flex; gap: .35rem; align-items: center; }
+.slidev-layout .molecule-tail span { width: 1.25rem; height: .38rem; background: #9aafbc; border-radius: 1rem; transform: rotate(-18deg); }
+.slidev-layout .molecule-tail span:nth-child(even) { transform: rotate(18deg); }
+.slidev-layout .molecule-head { background: var(--soap-orange); color: #211a15; font-weight: 800; border-radius: 50%; padding: 1.15rem .75rem; margin-left: .3rem; font-size: 1.08rem; }
+.slidev-layout .molecule-labels { display: flex; justify-content: space-between; color: var(--soap-muted); font-size: .8rem; letter-spacing: .08em; }
+.slidev-layout .molecule-labels span:last-child { color: var(--soap-orange); }
+.slidev-layout .molecule-explain { display: grid; gap: .7rem; }
+.slidev-layout .explain-row { border: 1px solid var(--soap-line); border-radius: .75rem; padding: .8rem 1rem; background: rgba(255,255,255,.025); }
+.slidev-layout .explain-row b { color: var(--soap-orange); font-size: 1.05rem; }
+.slidev-layout .explain-row p { color: var(--soap-muted); font-size: .95rem; line-height: 1.4; margin: .2rem 0 0; }
+.slidev-layout .highlight-explain { background: rgba(229,138,75,.09); border-color: rgba(229,138,75,.4); }
+.slidev-layout .micro-note { color: var(--soap-muted); font-size: .82rem; line-height: 1.45; margin-top: .8rem; border-left: 2px solid var(--soap-orange); padding-left: .8rem; }
+
+/* Process and safety */
+.slidev-layout .timeline-report { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem 1.2rem; }
+.slidev-layout .timeline-report-item { display: flex; gap: .8rem; align-items: flex-start; border-bottom: 1px solid var(--soap-line); padding: .65rem 0 .85rem; }
+.slidev-layout .timeline-number { flex: 0 0 2.3rem; height: 2.3rem; display: grid; place-items: center; border-radius: 50%; background: rgba(229,138,75,.15); color: var(--soap-orange); font-weight: 800; }
+.slidev-layout .timeline-report-item b { font-size: 1.08rem; }
+.slidev-layout .timeline-report-item p { color: var(--soap-muted); font-size: .95rem; line-height: 1.45; margin-top: .2rem; }
+.slidev-layout .safety-callout { margin-top: .85rem; padding: .75rem .9rem; background: rgba(229,138,75,.1); border: 1px solid rgba(229,138,75,.35); border-radius: .7rem; font-size: .96rem; line-height: 1.45; }
+.slidev-layout .safety-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.slidev-layout .safety-card { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: .85rem; padding: .9rem 1rem; min-height: 7.6rem; }
+.slidev-layout .safety-icon { color: var(--soap-orange); font-size: 1.2rem; font-weight: 800; }
+.slidev-layout .safety-card h3 { margin: .28rem 0; font-size: 1.08rem; }
+.slidev-layout .safety-card p { color: var(--soap-muted); font-size: .92rem; line-height: 1.45; }
+.slidev-layout .warning-card { border-color: rgba(229,138,75,.65); }
+
+/* Actual evidence photo slots */
+.slidev-layout .evidence-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .85rem; }
+.slidev-layout .evidence-card { min-width: 0; }
+.slidev-layout .photo-slot { min-height: 12rem; border: 1px dashed rgba(229,138,75,.65); border-radius: .85rem; background: radial-gradient(circle at 50% 35%,rgba(229,138,75,.12),transparent 58%),#202522; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: .8rem; }
+.slidev-layout .photo-slot span { color: var(--soap-orange); font-size: .96rem; letter-spacing: .09em; font-weight: 800; }
+.slidev-layout .photo-slot b { margin-top: .5rem; font-size: 1.05rem; }
+.slidev-layout .photo-slot small { color: var(--soap-muted); font-size: .82rem; margin-top: .25rem; }
+.slidev-layout .evidence-card > p { color: var(--soap-muted); font-size: .86rem; line-height: 1.4; margin-top: .45rem; }
+
+/* Product result */
+.slidev-layout .result-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 1rem; align-items: stretch; }
+.slidev-layout .result-photo-slot { min-height: 17rem; border: 1px dashed rgba(229,138,75,.7); border-radius: 1rem; background: radial-gradient(circle at 50% 45%,rgba(229,138,75,.14),transparent 58%),#202522; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; }
+.slidev-layout .result-photo-slot span { color: var(--soap-orange); font-size: .8rem; font-weight: 800; letter-spacing: .13em; }
+.slidev-layout .result-photo-slot b { max-width: 19rem; margin-top: .65rem; font-size: 1.12rem; }
+.slidev-layout .result-photo-slot small { color: var(--soap-muted); margin-top: .4rem; font-size: .84rem; }
+.slidev-layout .result-observations { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: 1rem; padding: 1rem 1.15rem; }
+.slidev-layout .result-heading { color: var(--soap-orange); font-size: .82rem; letter-spacing: .11em; font-weight: 800; margin-bottom: .5rem; }
+.slidev-layout .result-line { display: flex; justify-content: space-between; gap: .8rem; padding: .6rem 0; border-bottom: 1px solid var(--soap-line); }
+.slidev-layout .result-line b { font-size: 1.08rem; }
+.slidev-layout .result-line span { color: var(--soap-muted); font-size: .9rem; text-align: right; }
+
+/* Evaluation and application */
+.slidev-layout .evaluation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+.slidev-layout .evaluation-card { background: var(--soap-panel); border: 1px solid var(--soap-line); border-radius: .85rem; padding: 1rem; }
+.slidev-layout .evaluation-card b { color: var(--soap-orange); font-size: 1.08rem; }
+.slidev-layout .evaluation-card p { color: var(--soap-muted); font-size: .92rem; line-height: 1.45; margin: .35rem 0 .6rem; }
+.slidev-layout .evaluation-card span { font-size: .78rem; letter-spacing: .06em; color: var(--soap-cream); }
+.slidev-layout .application-strip { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .5rem; margin-top: .85rem; }
+.slidev-layout .application-strip > div { background: rgba(229,138,75,.09); border: 1px solid rgba(229,138,75,.25); border-radius: .65rem; padding: .65rem; }
+.slidev-layout .application-strip b, .slidev-layout .application-strip span { display: block; }
+.slidev-layout .application-strip b { color: var(--soap-orange); font-size: .82rem; letter-spacing: .06em; }
+.slidev-layout .application-strip span { color: var(--soap-muted); font-size: .9rem; line-height: 1.3; margin-top: .2rem; }
+
+/* Closing */
+.slidev-layout .final-report h1 { font-size: 3.5rem; }
+.slidev-layout .closing-takeaways { display: grid; gap: .45rem; max-width: 33rem; margin-top: .4rem; }
+.slidev-layout .closing-takeaways > div { display: flex; gap: .8rem; align-items: center; border-bottom: 1px solid var(--soap-line); padding: .45rem 0; }
+.slidev-layout .closing-takeaways b { color: var(--soap-orange); font-size: .96rem; }
+.slidev-layout .closing-takeaways span { color: var(--soap-muted); font-size: 1rem; }
+.slidev-layout .closing-slide h2 { margin-top: .7rem; color: var(--soap-orange); font-size: .96rem; letter-spacing: .09em; }
+
+@media (max-width: 700px) {
+  .slidev-layout { padding: 1.6rem 1.2rem; }
+  .slidev-layout .report-cover, .slidev-layout .question-layout,
+  .slidev-layout .materials-layout, .slidev-layout .molecule-layout,
+  .slidev-layout .result-layout { grid-template-columns: 1fr; }
+  .slidev-layout .card-grid.three { grid-template-columns: 1fr; }
+  .slidev-layout .evidence-grid { grid-template-columns: 1fr 1fr; }
+  .slidev-layout .timeline-report, .slidev-layout .safety-grid,
+  .slidev-layout .evaluation-grid { grid-template-columns: 1fr; }
+  .slidev-layout .application-strip { grid-template-columns: 1fr 1fr; }
+  .slidev-layout .cover h1, .slidev-layout .closing-slide h1 { font-size: 2.7rem; }
+}
+
+/* Ảnh thực tế: dùng khi thay các khung giữ chỗ */
+.slidev-layout .evidence-photo {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: .85rem;
+  border: 1px solid var(--soap-line);
+}
+.slidev-layout .result-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 17rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* ==========================================================
+   TV-FIRST READABILITY OVERRIDES
+   Ưu tiên người xem ngồi xa: chữ lớn hơn, nét đậm hơn,
+   tăng tương phản và rút gọn các dòng chú thích dài.
+   ========================================================== */
+:root {
+  --soap-muted: #d0cec6;
+}
+
+.slidev-layout {
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: #f5f2eb;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  font-weight: 500;
+}
+
+.slidev-layout h1 {
+  font-size: 2.95rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.slidev-layout .section-lead {
+  color: #dedbd2;
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.42;
+  max-width: 52rem;
+  margin-bottom: 1.05rem;
+}
+
+.slidev-layout .eyebrow {
+  font-size: 1rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+}
+
+.slidev-layout .bottom-note {
+  color: #d0cec6;
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
+  margin-top: 0.6rem;
+}
+
+/* Trang bìa và trang kết thúc */
+.slidev-layout .cover h1,
+.slidev-layout .closing-slide h1 {
+  font-size: 4rem;
+  font-weight: 850;
+  line-height: 1.04;
+}
+
+.slidev-layout .cover-subtitle {
+  font-size: 1.48rem;
+  font-weight: 600;
+  color: #e0ddd5;
+}
+
+.slidev-layout .cover-meta {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.slidev-layout .visual-caption,
+.slidev-layout .photo-hint {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+/* Câu hỏi dẫn dắt và mục tiêu */
+.slidev-layout .question-main h2 {
+  font-size: 2.35rem;
+  font-weight: 750;
+}
+
+.slidev-layout .question-main p {
+  color: #dedbd2;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.slidev-layout .mini-stat strong {
+  font-size: 1.7rem;
+  font-weight: 850;
+}
+
+.slidev-layout .mini-stat span {
+  color: #dedbd2;
+  font-size: 3rem;
+  font-weight: 650;
+}
+
+.slidev-layout .card-number {
+  font-size: 0.98rem;
+  font-weight: 850;
+}
+
+.slidev-layout .card-icon {
+  font-size: 2rem;
+}
+
+.slidev-layout .info-card h3 {
+  font-size: 1.38rem;
+  font-weight: 800;
+}
+
+.slidev-layout .info-card p {
+  color: #dedbd2;
+  font-size: 1.12rem;
+  font-weight: 550;
+  line-height: 1.42;
+}
+
+/* Nguyên liệu và dụng cụ */
+.slidev-layout .material-primary h2 {
+  font-size: 2.35rem;
+  font-weight: 800;
+}
+
+.slidev-layout .material-primary p {
+  color: #e0ddd5;
+  font-size: 1.18rem;
+  font-weight: 550;
+}
+
+.slidev-layout .material-row {
+  padding: 0.78rem 0.9rem;
+  gap: 0.8rem;
+}
+
+.slidev-layout .material-row b {
+  font-size: 1.12rem;
+  font-weight: 850;
+  min-width: 8rem;
+}
+
+.slidev-layout .material-row span {
+  color: #dedbd2;
+  text-align: left;
+  font-size: 1.08rem;
+  font-weight: 550;
+  line-height: 1.3;
+}
+
+/* Phương trình và khái niệm hóa học */
+.slidev-layout .reaction-equation {
+  font-size: 1.62rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.slidev-layout .product-pair b {
+  font-size: 1.16rem;
+  font-weight: 800;
+}
+
+.slidev-layout .product-pair span,
+.slidev-layout .concept-item span {
+  color: #dedbd2;
+  font-size: 1.04rem;
+  font-weight: 550;
+}
+
+.slidev-layout .concept-item b {
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
+/* Cấu tạo phân tử và cơ chế làm sạch */
+.slidev-layout .molecule-labels {
+  color: #dedbd2;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.slidev-layout .molecule-head {
+  font-size: 1.15rem;
+  font-weight: 850;
+}
+
+.slidev-layout .explain-row b {
+  font-size: 1.18rem;
+  font-weight: 850;
+}
+
+.slidev-layout .explain-row p {
+  color: #dedbd2;
+  font-size: 1.08rem;
+  font-weight: 550;
+  line-height: 1.38;
+}
+
+.slidev-layout .micro-note {
+  color: #dedbd2;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Quy trình thực hành và an toàn */
+.slidev-layout .timeline-number {
+  font-size: 1.08rem;
+  font-weight: 850;
+}
+
+.slidev-layout .timeline-report-item b {
+  font-size: 1.2rem;
+  font-weight: 850;
+}
+
+.slidev-layout .timeline-report-item p {
+  color: #dedbd2;
+  font-size: 1.08rem;
+  font-weight: 550;
+  line-height: 1.38;
+}
+
+.slidev-layout .safety-callout {
+  font-size: 1.08rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.slidev-layout .safety-card {
+  padding: 1rem 1.1rem;
+}
+
+.slidev-layout .safety-icon {
+  font-size: 1.35rem;
+  font-weight: 850;
+}
+
+.slidev-layout .safety-card h3 {
+  font-size: 1.2rem;
+  font-weight: 850;
+}
+
+.slidev-layout .safety-card p {
+  color: #dedbd2;
+  font-size: 1.05rem;
+  font-weight: 550;
+  line-height: 1.38;
+}
+
+/* Ảnh minh chứng và thành phẩm */
+.slidev-layout .photo-slot span,
+.slidev-layout .result-photo-slot span {
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.slidev-layout .photo-slot b,
+.slidev-layout .result-photo-slot b {
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+.slidev-layout .photo-slot small,
+.slidev-layout .result-photo-slot small {
+  color: #dedbd2;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+.slidev-layout .evidence-card > p {
+  color: #dedbd2;
+  font-size: 1.02rem;
+  font-weight: 550;
+}
+
+.slidev-layout .result-heading {
+  font-size: 0.98rem;
+  font-weight: 850;
+}
+
+.slidev-layout .result-line b {
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
+.slidev-layout .result-line span {
+  color: #dedbd2;
+  font-size: 1.02rem;
+  font-weight: 550;
+}
+
+/* Đánh giá và ứng dụng */
+.slidev-layout .evaluation-card b {
+  font-size: 1.2rem;
+  font-weight: 850;
+}
+
+.slidev-layout .evaluation-card p {
+  color: #dedbd2;
+  font-size: 1.06rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.slidev-layout .evaluation-card span {
+  font-size: 0.96rem;
+  font-weight: 750;
+  letter-spacing: 0.025em;
+}
+
+.slidev-layout .application-strip > div {
+  padding: 0.75rem;
+}
+
+.slidev-layout .application-strip b {
+  font-size: 0.98rem;
+  font-weight: 850;
+}
+
+.slidev-layout .application-strip span {
+  color: #dedbd2;
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Tổng kết */
+.slidev-layout .closing-takeaways b {
+  font-size: 1.08rem;
+  font-weight: 850;
+}
+
+.slidev-layout .closing-takeaways span {
+  color: #dedbd2;
+  font-size: 1.16rem;
+  font-weight: 650;
+}
+
+.slidev-layout .closing-slide h2 {
+  font-size: 1.15rem;
+  font-weight: 850;
+  letter-spacing: 0.055em;
+}
+
+
+/* TV-FIRST V3: safety slide readability without a clipped footer */
+.slidev-layout:has(.safety-grid) .section-lead {
+  margin-bottom: 0.85rem;
+  font-size: 1.32rem;
+  font-weight: 650;
+}
+
+.slidev-layout .safety-grid {
+  gap: 0.7rem 0.85rem;
+}
+
+.slidev-layout .safety-card {
+  min-height: 0;
+  padding: 0.85rem 1rem;
+}
+
+.slidev-layout .safety-card h3 {
+  font-size: 1.24rem;
+  font-weight: 850;
+  line-height: 1.22;
+}
+
+.slidev-layout .safety-card p {
+  color: #e3e0d8;
+  font-size: 1.15rem;
+  font-weight: 650;
+  line-height: 1.34;
+  margin: 0.35rem 0 0;
+}
+
+
+/* Slide 8: ghi chú theo đúng tài liệu thực hành, không thêm mục giám sát */
+.slidev-layout .source-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.72rem;
+  margin-top: 0.7rem;
+}
+
+.slidev-layout .source-note-card {
+  grid-column: span 2;
+  min-width: 0;
+  min-height: 7rem;
+  padding: 0.78rem 0.9rem;
+  border: 1px solid var(--soap-line);
+  border-radius: 0.85rem;
+  background: var(--soap-panel);
+}
+
+.slidev-layout .source-note-card.wide-note {
+  grid-column: span 3;
+  min-height: 5.4rem;
+}
+
+.slidev-layout .source-note-number {
+  color: var(--soap-orange);
+  font-size: 1.02rem;
+  line-height: 1.1;
+  font-weight: 850;
+  margin-bottom: 0.28rem;
+}
+
+.slidev-layout .source-note-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.22rem;
+  line-height: 1.2;
+  font-weight: 850;
+}
+
+.slidev-layout .source-note-card p {
+  margin: 0;
+  color: #e3e0d8;
+  font-size: 1.02rem;
+  line-height: 1.32;
+  font-weight: 600;
+}
+
+.slidev-layout .source-note-card.patience-note {
+  border-color: rgba(229,138,75,.6);
+  background: rgba(229,138,75,.08);
+}
+
+.slidev-layout .source-safety-footnote {
+  margin-top: 0.72rem;
+  padding-left: 0.7rem;
+  border-left: 3px solid var(--soap-orange);
+  color: #dedbd2;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 700px) {
+  .slidev-layout .source-note-card,
+  .slidev-layout .source-note-card.wide-note {
+    grid-column: span 6;
+  }
+}
+
+
+
+/* CUTE BLUE / KAWAII CHEMISTRY */
+:root {
+  --soap-bg: #eaf6ff;
+  --soap-panel: #ffffff;
+  --soap-panel-2: #d9efff;
+  --soap-cream: #173b5b;
+  --soap-muted: #426783;
+  --soap-orange: #238bd1;
+  --soap-line: rgba(45, 133, 190, .20);
+  --soap-blue-deep: #15527d;
+}
+.slidev-layout {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(151,218,255,.42), transparent 22%),
+    radial-gradient(circle at 94% 88%, rgba(190,231,255,.55), transparent 24%),
+    linear-gradient(135deg,#f4fbff 0%,#e7f5ff 55%,#f5fbff 100%);
+  color: var(--soap-cream);
+}
+.slidev-layout::before, .slidev-layout::after {
+  position: absolute; z-index: 0; pointer-events: none; user-select: none;
+  line-height: 1; filter: drop-shadow(0 5px 7px rgba(45,133,190,.12));
+}
+.slidev-layout::before {
+  content: "🫧"; top: 1.05rem; right: 1.35rem; font-size: 2.25rem;
+  opacity: .78; animation: kawaii-float 4.8s ease-in-out infinite;
+}
+.slidev-layout::after {
+  content: "💧"; bottom: 1.05rem; left: 1.25rem; font-size: 1.65rem;
+  opacity: .48; animation: kawaii-bob 5.6s ease-in-out infinite;
+}
+.slidev-layout > * { position: relative; z-index: 1; }
+.slidev-layout h1, .slidev-layout h2, .slidev-layout h3 { color: #15527d; }
+.slidev-layout h1 { text-shadow: 0 2px 0 rgba(255,255,255,.7); }
+.slidev-layout h1::after {
+  background: linear-gradient(90deg,#39a8e8,#8bd5ff); border-radius: 999px;
+}
+.slidev-layout .eyebrow, .slidev-layout .card-number,
+.slidev-layout .source-note-number, .slidev-layout .result-heading {
+  color: #1684c5;
+}
+.slidev-layout .section-lead, .slidev-layout .bottom-note,
+.slidev-layout .cover-subtitle, .slidev-layout .cover-meta,
+.slidev-layout .question-main p, .slidev-layout .mini-stat span,
+.slidev-layout .info-card p, .slidev-layout .material-primary p,
+.slidev-layout .material-row span, .slidev-layout .product-pair span,
+.slidev-layout .concept-item span, .slidev-layout .explain-row p,
+.slidev-layout .timeline-report-item p, .slidev-layout .micro-note,
+.slidev-layout .photo-slot small, .slidev-layout .result-photo-slot small,
+.slidev-layout .result-line span, .slidev-layout .evaluation-card p,
+.slidev-layout .application-strip span, .slidev-layout .closing-takeaways span,
+.slidev-layout .source-note-card p { color: #426783; }
+
+.slidev-layout .question-main, .slidev-layout .info-card,
+.slidev-layout .material-primary, .slidev-layout .reaction-panel,
+.slidev-layout .molecule-card, .slidev-layout .explain-row,
+.slidev-layout .result-observations, .slidev-layout .evaluation-card,
+.slidev-layout .source-note-card {
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(70,160,215,.22);
+  border-radius: 1.25rem;
+  box-shadow: 0 9px 24px rgba(48,126,174,.08);
+}
+.slidev-layout .accent-card, .slidev-layout .highlight-explain,
+.slidev-layout .source-note-card.patience-note {
+  background: linear-gradient(145deg,#fff,#e7f6ff);
+  border-color: rgba(35,139,209,.38);
+}
+.slidev-layout .mini-stat, .slidev-layout .material-row {
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(70,160,215,.2); border-radius: .95rem;
+}
+.slidev-layout .mini-stat strong, .slidev-layout .material-row b,
+.slidev-layout .explain-row b, .slidev-layout .evaluation-card b,
+.slidev-layout .application-strip b, .slidev-layout .closing-takeaways b {
+  color: #1684c5;
+}
+.slidev-layout .card-icon { color: #42a9e4; }
+.slidev-layout .cover-rule {
+  background: linear-gradient(90deg,#238bd1,#9cddff); border-radius: 999px;
+}
+.slidev-layout .cover-meta span { color: #238bd1; }
+.slidev-layout .cover-visual {
+  border: 1px solid rgba(70,160,215,.25); border-radius: 1.6rem;
+  background: radial-gradient(circle at 50% 40%,rgba(133,211,255,.45),transparent 58%),
+              linear-gradient(145deg,#dff3ff,#f8fcff);
+  box-shadow: 0 15px 35px rgba(48,126,174,.12);
+}
+.slidev-layout .bar-back { background: #7fc5ed; }
+.slidev-layout .bar-mid { background: #b6e2fb; }
+.slidev-layout .bar-front {
+  background: linear-gradient(135deg,#e5f7ff,#8cccf0); color: #174c70;
+  box-shadow: 0 1rem 2rem rgba(46,119,163,.18);
+}
+.slidev-layout .visual-caption { color: #1684c5; }
+.slidev-layout .photo-hint { color: #426783; }
+.slidev-layout .reaction-symbol { color: #426783; }
+.slidev-layout .reaction-arrow { color: #1684c5; }
+.slidev-layout .product-pair > div { border-top-color: #56b5e9; }
+.slidev-layout .concept-item { border-left-color: #56b5e9; }
+.slidev-layout .molecule-tail span { background: #68b9e8; }
+.slidev-layout .molecule-head {
+  background: #b8e6ff; color: #15527d; border: 2px solid #69bce9;
+}
+.slidev-layout .molecule-labels { color: #426783; }
+.slidev-layout .molecule-labels span:last-child { color: #1684c5; }
+.slidev-layout .micro-note { border-left-color: #49aee5; }
+.slidev-layout .timeline-number { background: #d9f0ff; color: #167fbd; }
+.slidev-layout .safety-callout {
+  background: #fff8e8; border: 1px solid #f0d99e; color: #69552b;
+  border-radius: 1rem;
+}
+.slidev-layout .photo-slot, .slidev-layout .result-photo-slot {
+  background: radial-gradient(circle at 50% 35%,rgba(137,211,250,.28),transparent 58%),#f8fcff;
+  border: 2px dashed rgba(35,139,209,.42); border-radius: 1.2rem;
+}
+.slidev-layout .photo-slot span, .slidev-layout .result-photo-slot span {
+  color: #1684c5;
+}
+.slidev-layout .result-line { border-bottom-color: rgba(45,133,190,.16); }
+.slidev-layout .application-strip > div {
+  background: #e2f4ff; border: 1px solid rgba(35,139,209,.2);
+  border-radius: .9rem;
+}
+.slidev-layout .closing-slide h2 { color: #1684c5; }
+
+@keyframes kawaii-float {
+  0%,100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-9px) rotate(6deg); }
+}
+@keyframes kawaii-bob {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(9deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slidev-layout::before, .slidev-layout::after { animation: none !important; }
+}
+
+/* =========================================================
+   SOAP'S LITTLE WORLD — DREAMY LAYERED SCRAPBOOK REDESIGN
+   16:9 projection-first overrides; preserve original slide copy.
+   ========================================================= */
+:root {
+  --soap-bg: #dff3ff;
+  --soap-panel: #fffdf8;
+  --soap-panel-2: #f4faff;
+  --soap-cream: #173f63;
+  --soap-muted: #466b87;
+  --soap-orange: #e5b84f;
+  --soap-line: rgba(48, 119, 164, .22);
+  --soap-blue: #8bcdf1;
+  --soap-navy: #17466d;
+  --soap-paper: #fffdf7;
+}
+.slidev-layout {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255,255,255,.96) 0 3.5rem, transparent 3.7rem),
+    radial-gradient(circle at 92% 84%, rgba(255,255,255,.75) 0 4.2rem, transparent 4.4rem),
+    radial-gradient(circle at 82% 13%, rgba(255,255,255,.55) 0 1.3rem, transparent 1.5rem),
+    linear-gradient(135deg,#d9f0ff 0%,#edf8ff 48%,#d5edff 100%);
+  color: var(--soap-navy);
+  font-family: "Aptos", "Segoe UI", Inter, sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.42;
+  padding: 1.8rem 2.45rem 1.55rem;
+}
+.slidev-layout::before {
+  content: ""; position: absolute; z-index: -1; inset: .65rem;
+  border: 2px dashed rgba(65,148,194,.25); border-radius: 1.45rem;
+  pointer-events: none;
+}
+.slidev-layout::after {
+  content: "✦   ·   ○   ✧"; position: absolute; z-index: -1;
+  right: 2.1rem; top: 1.15rem; color: rgba(43,133,188,.26);
+  font-size: 1.25rem; letter-spacing: .65rem; pointer-events: none;
+}
+.slidev-layout h1,.slidev-layout h2,.slidev-layout h3,.slidev-layout p { color: inherit; }
+.slidev-layout h1 { font-size: 2.55rem; line-height: 1.06; font-weight: 900; letter-spacing: -.035em; text-shadow: 0 2px 0 #fff; margin-bottom: .55rem; }
+.slidev-layout h1::after { background: linear-gradient(90deg,#55b4e7,#f1c96d); height: 5px; width: 4.1rem; border-radius: 10px; margin-top: .55rem; }
+.slidev-layout h2 { font-size: 1.85rem; line-height: 1.15; font-weight: 850; }
+.slidev-layout h3 { font-size: 1.3rem; line-height: 1.2; font-weight: 850; }
+.slidev-layout p { font-size: 1.08rem; line-height: 1.42; }
+.slidev-layout .section-lead { color: #426985; font-size: 1.15rem; line-height: 1.35; margin: .1rem 0 .85rem; max-width: 54rem; }
+.slidev-layout .eyebrow { color: #287eae; font-size: .78rem; font-weight: 900; letter-spacing: .14em; }
+.slidev-layout .bottom-note { color: #4d718a; font-size: .76rem; font-weight: 750; letter-spacing: .04em; }
+.slidev-layout .info-card,.slidev-layout .question-main,.slidev-layout .material-primary,
+.slidev-layout .reaction-panel,.slidev-layout .molecule-card,.slidev-layout .concept-item,
+.slidev-layout .source-note-card,.slidev-layout .evidence-card,.slidev-layout .evaluation-card {
+  background: var(--soap-paper); color: var(--soap-navy);
+  border: 2px solid rgba(93,166,207,.3); border-radius: 1.05rem;
+  box-shadow: 0 7px 0 rgba(84,157,198,.12), 0 14px 28px rgba(44,105,146,.09);
+}
+.slidev-layout .info-card { padding: 1rem 1.15rem; }
+.slidev-layout .info-card p,.slidev-layout .question-main p,.slidev-layout .material-primary p { color: #426985; }
+.slidev-layout .card-number,.slidev-layout .material-row b,.slidev-layout .timeline-number { color: #167fb8; }
+.slidev-layout .card-icon { color: #e0ad35; }
+.slidev-layout .accent-card { border-color: #80c8ec; background: #fffaf0; }
+.slidev-layout .question-main { background: #fffdf8; padding: 1.25rem 1.4rem; }
+.slidev-layout .mini-stat { background: #fffdf8; border: 2px dashed #9bcfe9; border-radius: .95rem; }
+.slidev-layout .mini-stat strong { color: #1685c0; font-size: 2rem; font-weight: 900;}
+.slidev-layout .mini-stat span { color: #426985; font-size: 1rem; font-size: 1.2rem;font-weight: 750;}
+.slidev-layout .material-row { background: #fffdf8; border: 1.5px solid #c4e3f4; border-radius: .8rem; padding: .55rem .8rem; box-shadow: 0 4px 0 rgba(81,153,192,.1); }
+.slidev-layout .material-row span { color: #426985; font-size: .94rem; }
+.slidev-layout .reaction-panel { background: #fffdf8; }
+.slidev-layout .reaction-equation { color: #17466d; font-size: 1.55rem; font-weight: 850; }
+.slidev-layout .molecule-card { background: #fffdf8; }
+.slidev-layout .molecule-labels { font-size: .84rem; font-weight: 900; }
+.slidev-layout .timeline-report-item { background: rgba(255,253,248,.92); border: 1.5px solid #b9def1; border-radius: .9rem; padding: .65rem .85rem; box-shadow: 0 4px 0 rgba(81,153,192,.1); }
+.slidev-layout .timeline-report-item p { color: #426985; margin-bottom: 0; }
+.slidev-layout .safety-callout { color: #725c2d; background: #fff7df; border: 1px solid #efd58c; }
+.slidev-layout .source-note-card { padding: .75rem .9rem; }
+.slidev-layout .source-note-card p { color: #426985; font-size: 1rem; }
+.slidev-layout .photo-slot,.slidev-layout .result-photo-slot { background: #fffdf8; border: 2px dashed #75bce2; box-shadow: 0 6px 0 rgba(81,153,192,.1); }
+.slidev-layout .photo-slot span,.slidev-layout .result-photo-slot span { color: #167fb8; }
+.slidev-layout .result-line { border-bottom-color: #c6e3f2; }
+.slidev-layout .application-strip > div { background: #fffdf8; border: 1.5px solid #b9def1; box-shadow: 0 4px 0 rgba(81,153,192,.1); }
+.slidev-layout .application-strip span { color: #426985; }
+
+/* Cover collage */
+.slidev-layout .report-cover { position: relative; min-height: 100%; grid-template-columns: 1.08fr .92fr; gap: 1rem; padding: 1.2rem 1.25rem; border-radius: 1.45rem; background: linear-gradient(135deg,#c8eaff,#eaf7ff 52%,#c9e9fb); border: 3px solid #fff; box-shadow: inset 0 0 0 2px #9bd2ef, 0 10px 0 rgba(61,139,185,.12); }
+.slidev-layout .cover-copy { position: relative; z-index: 2; }
+.slidev-layout .cover h1 { color: #17466d; font-size: 3.35rem; text-shadow: 2px 3px 0 #fff, 0 7px 18px rgba(30,103,151,.12); }
+.slidev-layout .cover h1 span { color: #2387bd; }
+.slidev-layout .cover-subtitle { color: #426985; font-size: 1.25rem; font-weight: 700; }
+.slidev-layout .cover-meta { display: inline-block; background: #fffdf8; border: 2px dashed #70b9df; border-radius: 999px; padding: .55rem .9rem; color: #17466d; font-size: 1rem; font-weight: 900; box-shadow: 0 5px 0 rgba(61,139,185,.1); }
+.slidev-layout .cover-visual { position: relative; min-height: 19rem; border: 2px solid #fff; border-radius: 1.35rem; background: radial-gradient(circle at 50% 45%,#fff 0 10%,transparent 52%),linear-gradient(150deg,#d9f2ff,#a9dcf6); box-shadow: 0 8px 0 rgba(61,139,185,.13); overflow: visible; }
+.slidev-layout .cover-mascot { position: absolute; z-index: 4; width: 9.2rem; right: .1rem; top: -1rem; filter: drop-shadow(0 9px 8px rgba(44,105,146,.16)); }
+.slidev-layout .soap-stack { transform: scale(.82) rotate(-5deg); }
+.slidev-layout .visual-caption { color: #167fb8; background: #fffdf8; border-radius: 999px; padding: .35rem .7rem; }
+.slidev-layout .photo-hint { color: #426985; }
+.slidev-layout .cover-rule { background: linear-gradient(90deg,#54b5e7,#f1c96d); }
+
+/* Scrapbook layering and staggered collage */
+.slidev-layout .scrapbook-card,.slidev-layout .scrapbook-note { position: relative; }
+.slidev-layout .objective-grid .info-card:nth-child(1) { transform: rotate(-2deg) translateY(.35rem); }
+.slidev-layout .objective-grid .info-card:nth-child(2) { transform: rotate(1.4deg) translateY(-.15rem); }
+.slidev-layout .objective-grid .info-card:nth-child(3) { transform: rotate(-1deg) translateY(.45rem); }
+.slidev-layout .scrapbook-card::before,.slidev-layout .scrapbook-note::before { content: ""; position: absolute; width: 4.2rem; height: .9rem; top: -.38rem; left: 1.1rem; background: rgba(255,224,139,.7); transform: rotate(-5deg); border-radius: .15rem; }
+.slidev-layout .scrapbook-note:nth-child(even)::before { left: auto; right: 1rem; transform: rotate(5deg); background: rgba(142,211,244,.62); }
+.slidev-layout .evidence-card:nth-child(2) { transform: rotate(1.2deg) translateY(.3rem); }
+.slidev-layout .evidence-card:nth-child(3) { transform: rotate(-1.4deg); }
+.slidev-layout .photo-slot { border-radius: .3rem; padding: 1rem; }
+.slidev-layout .closing-slide { border-radius: 1.4rem; background: linear-gradient(135deg,#c9eaff,#f2faff 52%,#c6e8fa); border: 3px solid #fff; box-shadow: inset 0 0 0 2px #9bd2ef; }
+.slidev-layout .closing-slide h1 { color: #17466d; text-shadow: 2px 3px 0 #fff; }
+.slidev-layout .closing-slide h1 span { color: #2387bd; }
+.slidev-layout .closing-slide h2 { color: #167fb8; font-size: 1.6rem; }
+.slidev-layout .closing-takeaways > div { background: #fffdf8; border: 1.5px solid #b9def1; border-radius: .8rem; box-shadow: 0 4px 0 rgba(81,153,192,.1); }
+.slidev-layout .closing-mascot { position: absolute; right: 1.2rem; top: .8rem; width: 8rem; }
+.slidev-layout .closing-meta { color: #17466d; font-weight: 900; background: #fffdf8; border: 2px dashed #70b9df; border-radius: 999px; padding: .45rem .8rem; display: inline-block; margin-top: .7rem; }
+.slidev-layout .closing-meta span { color: #e5b84f; padding: 0 .4rem; }
+
+/* Mascot motion is defined once in the V4 animation section below. */
+@keyframes scrapbook-arrive {
+  from { opacity: 0; translate: 0 14px; filter: blur(2px); }
+  to   { opacity: 1; translate: 0 0; filter: blur(0); }
+}
+
+/* Main content reveals itself automatically as the slide appears. */
+.slidev-layout .info-card,
+.slidev-layout .material-row,
+.slidev-layout .concept-item,
+.slidev-layout .process-stage,
+.slidev-layout .source-note-card,
+.slidev-layout .evaluation-card,
+.slidev-layout .mini-stat,
+.slidev-layout .question-main,
+.slidev-layout .reaction-panel,
+.slidev-layout .molecule-card,
+.slidev-layout .explain-row,
+.slidev-layout .application-strip > div,
+.slidev-layout .closing-takeaways > div,
+.slidev-layout .process-observation,
+.slidev-layout .safety-callout,
+.slidev-layout .photo-detail-layout > *,
+.slidev-layout .materials-evidence-layout > *,
+.slidev-layout .coconut-ingredient {
+  animation: scrapbook-arrive .68s cubic-bezier(.2,.75,.25,1) both;
+}
+
+/* Gentle stagger creates a sequence without requiring the presenter to click. */
+.slidev-layout .objective-grid > *:nth-child(1),
+.slidev-layout .materials-list--large > *:nth-child(1),
+.slidev-layout .concept-grid > *:nth-child(1),
+.slidev-layout .process-five > *:nth-child(1),
+.slidev-layout .source-notes-grid > *:nth-child(1),
+.slidev-layout .evaluation-grid > *:nth-child(1),
+.slidev-layout .question-side > *:nth-child(1),
+.slidev-layout .closing-takeaways > *:nth-child(1),
+.slidev-layout .application-strip > *:nth-child(1) { animation-delay: .08s; }
+
+.slidev-layout .objective-grid > *:nth-child(2),
+.slidev-layout .materials-list--large > *:nth-child(2),
+.slidev-layout .concept-grid > *:nth-child(2),
+.slidev-layout .process-five > *:nth-child(2),
+.slidev-layout .source-notes-grid > *:nth-child(2),
+.slidev-layout .evaluation-grid > *:nth-child(2),
+.slidev-layout .question-side > *:nth-child(2),
+.slidev-layout .closing-takeaways > *:nth-child(2),
+.slidev-layout .application-strip > *:nth-child(2) { animation-delay: .17s; }
+
+.slidev-layout .objective-grid > *:nth-child(3),
+.slidev-layout .materials-list--large > *:nth-child(3),
+.slidev-layout .process-five > *:nth-child(3),
+.slidev-layout .source-notes-grid > *:nth-child(3),
+.slidev-layout .closing-takeaways > *:nth-child(3),
+.slidev-layout .application-strip > *:nth-child(3) { animation-delay: .26s; }
+
+.slidev-layout .materials-list--large > *:nth-child(4),
+.slidev-layout .process-five > *:nth-child(4),
+.slidev-layout .source-notes-grid > *:nth-child(4),
+.slidev-layout .application-strip > *:nth-child(4) { animation-delay: .35s; }
+
+.slidev-layout .materials-list--large > *:nth-child(5),
+.slidev-layout .process-five > *:nth-child(5),
+.slidev-layout .source-notes-grid > *:nth-child(5) { animation-delay: .44s; }
+
+.slidev-layout .materials-list--large > *:nth-child(6) { animation-delay: .53s; }
+
+.slidev-layout .report-cover .cover-copy { animation: scrapbook-arrive .8s .08s both; }
+.slidev-layout .report-cover .cover-visual { animation: scrapbook-arrive .85s .2s both; }
+.slidev-layout .closing-slide > .eyebrow,
+.slidev-layout .closing-slide > h1,
+.slidev-layout .closing-slide > .cover-rule,
+.slidev-layout .closing-slide > h2,
+.slidev-layout .closing-slide > .closing-meta { animation: scrapbook-arrive .72s .12s both; }
+.slidev-layout .closing-slide > h1 { animation-delay: .18s; }
+.slidev-layout .closing-slide > h2 { animation-delay: .58s; }
+.slidev-layout .closing-slide > .closing-meta { animation-delay: .68s; }
+
+@media (max-width: 900px) {
+  .slidev-layout { padding: 1.2rem 1.35rem; font-size: 1rem; }
+  .slidev-layout h1 { font-size: 2.1rem; }
+  .slidev-layout .cover h1 { font-size: 2.55rem; }
+  .slidev-layout .report-cover { grid-template-columns: 1fr 1fr; }
+}
+/* Motion is retained because this deck is specifically configured for animated presentation. */
+
+/* =========================================================
+   EVIDENCE & VIDEO REBUILD — large visual proof, TV-first
+   ========================================================= */
+.slidev-layout .materials-evidence-layout {
+  display: grid;
+  grid-template-columns: 1.04fr .96fr;
+  gap: 1rem;
+  align-items: stretch;
+  min-height: 25.5rem;
+}
+.slidev-layout .materials-evidence-copy {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  min-width: 0;
+}
+.slidev-layout .coconut-ingredient {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  padding: .5rem .8rem;
+  border: 1.5px solid #b9def1;
+  border-radius: 1rem;
+  background: linear-gradient(120deg,#fff8de,#fffdf7);
+  box-shadow: 0 5px 0 rgba(81,153,192,.1);
+}
+.slidev-layout .coconut-ingredient .coconut-illustration {
+  display: block;
+  flex: 0 0 5rem;
+  width: 5rem;
+  height: 4.4rem;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px rgba(57,126,172,.13));
+}
+.slidev-layout .ingredient-kicker {
+  color: #98752e;
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+.slidev-layout .coconut-ingredient h2 {
+  margin: .1rem 0 .12rem;
+  color: #17466d;
+  font-size: 1.42rem;
+}
+.slidev-layout .coconut-ingredient p {
+  margin: 0;
+  color: #55758b;
+  font-size: .84rem;
+  line-height: 1.25;
+}
+.slidev-layout .materials-list--large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 5.2rem;
+  gap: .5rem;
+  flex: 0 0 auto;
+}
+.slidev-layout .materials-list--large .material-row {
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: .08rem;
+  padding: .48rem .62rem;
+  border-radius: .78rem;
+}
+.slidev-layout .materials-list--large .material-row b {
+  min-width: 0;
+  color: #17547e;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.slidev-layout .materials-list--large .material-row span {
+  color: #52748c;
+  text-align: left;
+  font-size: .9rem;
+  line-height: 1.3
+}
+.slidev-layout .materials-evidence-layout > .photo-frame {
+  min-height: 0;
+  height: 21rem;
+}
+
+.slidev-layout .materials-evidence-layout > .photo-frame .photo-frame__image-wrap {
+  min-height: 0;
+  height: 15.5rem;
+  aspect-ratio: auto;
+}
+
+.slidev-layout .process-five {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: .68rem;
+  align-items: stretch;
+  padding: .55rem .1rem .8rem;
+}
+.slidev-layout .process-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 11rem;
+  padding: 1.12rem .62rem .72rem;
+  border: 2px solid #b9def1;
+  border-radius: 1.05rem;
+  background: #fffdf8;
+  text-align: center;
+  box-shadow: 0 6px 0 rgba(81,153,192,.11),0 12px 20px rgba(44,105,146,.07);
+}
+.slidev-layout .process-stage:nth-child(odd) { transform: rotate(-1deg) translateY(.18rem); }
+.slidev-layout .process-stage:nth-child(even) { transform: rotate(1deg) translateY(-.12rem); }
+.slidev-layout .process-number {
+  position: absolute;
+  top: -.78rem;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #65b9e8;
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 900;
+  box-shadow: 0 0 0 2px #79bfe2;
+}
+.slidev-layout .process-icon {
+  display: grid;
+  place-items: center;
+  min-height: 3.45rem;
+  margin: .25rem 0 .45rem;
+  color: #2688bd;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+.slidev-layout .process-stage h3 {
+  margin: .1rem 0 .28rem;
+  color: #17466d;
+  font-size: 1.06rem;
+}
+.slidev-layout .process-stage p {
+  margin: 0;
+  color: #587991;
+  font-size: .79rem;
+  line-height: 1.27;
+}
+.slidev-layout .process-observation {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: .38rem;
+  padding: .75rem 1rem;
+  border: 1.5px solid #f0d98c;
+  border-radius: 1rem;
+  background: #fff7df;
+  box-shadow: 0 5px 0 rgba(202,165,75,.1);
+}
+.slidev-layout .process-spark {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2.7rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  color: #a77b24;
+  background: #ffedb0;
+  font-size: 1.45rem;
+}
+.slidev-layout .process-observation b {
+  color: #725b27;
+  font-size: 1rem;
+}
+.slidev-layout .process-observation p {
+  margin: .12rem 0 0;
+  color: #77643b;
+  font-size: .92rem;
+}
+.slidev-layout .process-five + .process-observation + .safety-callout {
+  margin-top: .55rem;
+  padding: .55rem .8rem;
+  font-size: .84rem;
+}
+
+.slidev-layout .photo-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1.72fr) minmax(15rem,.78fr);
+  gap: 1.05rem;
+  align-items: stretch;
+  min-height: 27rem;
+}
+.slidev-layout .photo-detail-layout > .photo-frame {
+  min-height: 27rem;
+}
+.slidev-layout .photo-detail-layout > .photo-frame .photo-frame__image-wrap {
+  min-height: 21.5rem;
+}
+.slidev-layout .photo-observation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.05rem 1.1rem;
+  border: 2px solid #b9def1;
+  border-radius: 1.05rem;
+  background: #fffdf8;
+  box-shadow: 0 7px 0 rgba(81,153,192,.1),0 12px 24px rgba(44,105,146,.07);
+}
+.slidev-layout .observation-kicker {
+  color: #2586ba;
+  font-size: .9rem;
+  font-weight: 900;
+  letter-spacing: .14rem;
+}
+.slidev-layout .photo-observation h2 {
+  margin: .55rem 0 .7rem;
+  color: #17466d;
+  font-size: 1.5rem;
+}
+.slidev-layout .photo-observation ul {
+  display: grid;
+  gap: .45rem;
+  margin: .1rem 0 .65rem;
+  padding: 0;
+  list-style: none;
+}
+.slidev-layout .photo-observation li {
+  position: relative;
+  padding: .48rem .65rem .48rem 1.8rem;
+  border-radius: .65rem;
+  color: #285b7c;
+  background: #eaf6fd;
+  font-size: 9rem;
+  font-weight: 800;
+}
+.slidev-layout .photo-observation li::before {
+  content: "✦";
+  position: absolute;
+  left: .65rem;
+  color: #e0ad35;
+}
+.slidev-layout .photo-observation p {
+  margin: .35rem 0 0;
+  color: #597b92;
+  font-size: 6rem;
+  line-height: 1.4;
+}
+.slidev-layout .result-observation .result-line {
+  display: block;
+  padding: .6rem 0;
+}
+.slidev-layout .result-observation .result-line b,
+.slidev-layout .result-observation .result-line span {
+  display: block;
+  text-align: left;
+}
+.slidev-layout .result-observation .result-line b {
+  color: #17466d;
+  font-size: .96rem;
+}
+.slidev-layout .result-observation .result-line span {
+  margin-top: .12rem;
+  color: #5b7c93;
+  font-size: .82rem;
+}
+.slidev-layout .photo-detail-layout--final > .photo-frame {
+  transform: rotate(-.15deg);
+}
+.slidev-layout .photo-detail-layout--final .photo-frame__image-wrap {
+  background: radial-gradient(circle at 50% 40%,#fff 0 10%,transparent 56%),#eff8ff;
+}
+
+/* Keep the video screen as the visual focus; no decorations over footage. */
+.slidev-layout .fullscreen-video-card { min-height: 0; }
+.slidev-layout .fullscreen-video-card__stage { box-shadow: 0 7px 0 rgba(48,111,151,.1); }
+.slidev-layout .fullscreen-video-card__video:fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+}
+.slidev-layout .bottom-note { font-size: .82rem; }
+.slidev-layout .section-lead { font-size: 1.2rem; }
+
+@media (max-width: 900px) {
+  .slidev-layout .materials-evidence-layout,
+  .slidev-layout .photo-detail-layout { grid-template-columns: 1fr; }
+  .slidev-layout .materials-evidence-layout > .photo-frame,
+  .slidev-layout .photo-detail-layout > .photo-frame { min-height: auto; }
+  .slidev-layout .materials-evidence-layout > .photo-frame .photo-frame__image-wrap,
+  .slidev-layout .photo-detail-layout > .photo-frame .photo-frame__image-wrap { min-height: 16rem; }
+  .slidev-layout .process-five { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 620px) {
+  .slidev-layout .process-five { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .slidev-layout .materials-list--large { grid-template-columns: 1fr; }
+}
+
+/* The inline preview remains compact; the actual film opens at native fullscreen 16:9. */
+.slidev-layout .fullscreen-video-card__stage {
+  width: 100%;
+  max-width: min(100%, calc(54vh * 16 / 9));
+  max-height: 54vh;
+  margin: 0 auto;
+}
+.slidev-layout .fullscreen-video-card__video {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   V4 — VISIBLE AUTOMATIC MOTION (no click-to-reveal)
+   The effects run by themselves when each slide appears.
+   ========================================================= */
+
+/* Slide transition is configured in slides.md: slide-left. */
+
+@keyframes v4-title-in {
+  0% { opacity: 0; translate: 0 24px; filter: blur(3px); }
+  100% { opacity: 1; translate: 0 0; filter: blur(0); }
+}
+@keyframes v4-card-in {
+  0% { opacity: 0; translate: 0 24px; }
+  72% { opacity: 1; translate: 0 -3px; }
+  100% { opacity: 1; translate: 0 0; }
+}
+@keyframes v4-photo-in {
+  0% { opacity: 0; translate: 0 20px; scale: .975; }
+  100% { opacity: 1; translate: 0 0; scale: 1; }
+}
+@keyframes v4-mascot-arrive {
+  0% { opacity: 0; scale: .72; }
+  70% { opacity: 1; scale: 1.06; }
+  100% { opacity: 1; scale: 1; }
+}
+@keyframes v4-mascot-hover {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -8px; }
+}
+@keyframes v4-bubble-drift {
+  0%, 100% { translate: 0 10px; opacity: .34; }
+  50% { translate: 7px -15px; opacity: .75; }
+}
+@keyframes v4-soft-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(56,157,211,0)); }
+  50% { filter: drop-shadow(0 0 7px rgba(56,157,211,.26)); }
+}
+@keyframes v4-tail-draw {
+  from { opacity: .18; scale: .45; }
+  to { opacity: 1; scale: 1; }
+}
+
+/* Make slide changes visibly glide rather than only fade. */
+.slidev-layout > h1 {
+  animation: v4-title-in .78s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout > .section-lead {
+  animation: v4-title-in .82s .12s cubic-bezier(.2,.78,.2,1) both;
+}
+
+/* Cover: the paper composition arrives first; mascot floats slowly afterwards. */
+.slidev-layout .report-cover .cover-copy {
+  animation: v4-title-in .9s .08s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .report-cover .cover-visual {
+  animation: v4-photo-in .95s .2s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .cover-mascot {
+  animation: v4-mascot-arrive .40s .48s both,
+             v4-mascot-hover 2s 1.35s ease-in-out infinite !important;
+  transform-origin: 50% 55%;
+  will-change: translate, scale, opacity;
+}
+.slidev-layout .cover-visual::before,
+.slidev-layout .cover-visual::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.82);
+  background: radial-gradient(circle at 32% 28%, rgba(255,255,255,.92), rgba(255,255,255,.12) 72%);
+  box-shadow: 0 4px 14px rgba(50,139,190,.1);
+  animation: v4-bubble-drift 6s ease-in-out infinite;
+}
+.slidev-layout .cover-visual::before { width: 22px; height: 22px; left: 8%; top: 18%; }
+.slidev-layout .cover-visual::after { width: 34px; height: 34px; right: 12%; bottom: 24%; animation-delay: -2.4s; }
+
+/* Closing: the character and takeaways appear in a deliberate sequence. */
+.slidev-layout .closing-mascot {
+  animation: v4-mascot-arrive .82s .38s both,
+             v4-mascot-hover 7.2s 1.25s ease-in-out infinite !important;
+  transform-origin: 50% 55%;
+  will-change: translate, scale, opacity;
+}
+.slidev-layout .closing-slide > .eyebrow,
+.slidev-layout .closing-slide > h1,
+.slidev-layout .closing-slide > .cover-rule,
+.slidev-layout .closing-slide > h2,
+.slidev-layout .closing-slide > .closing-meta {
+  animation: v4-title-in .8s .12s both;
+}
+.slidev-layout .closing-slide > h1 { animation-delay: .22s; }
+.slidev-layout .closing-takeaways > div:nth-child(1) { animation: v4-card-in .76s .42s both; }
+.slidev-layout .closing-takeaways > div:nth-child(2) { animation: v4-card-in .76s .64s both; }
+.slidev-layout .closing-takeaways > div:nth-child(3) { animation: v4-card-in .76s .86s both; }
+.slidev-layout .closing-slide > h2 { animation-delay: 1.05s; }
+.slidev-layout .closing-slide > .closing-meta { animation-delay: 1.22s; }
+
+/* Each slide reveals its information automatically, without presenter clicks. */
+.slidev-layout .question-main,
+.slidev-layout .reaction-panel,
+.slidev-layout .molecule-card,
+.slidev-layout .materials-evidence-copy,
+.slidev-layout .photo-observation,
+.slidev-layout .process-observation,
+.slidev-layout .safety-callout {
+  animation: v4-photo-in .86s .16s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .question-side > *:nth-child(1),
+.slidev-layout .objective-grid > *:nth-child(1),
+.slidev-layout .materials-list--large > *:nth-child(1),
+.slidev-layout .concept-grid > *:nth-child(1),
+.slidev-layout .process-five > *:nth-child(1),
+.slidev-layout .source-notes-grid > *:nth-child(1),
+.slidev-layout .evaluation-grid > *:nth-child(1),
+.slidev-layout .application-strip > *:nth-child(1),
+.slidev-layout .molecule-explain > *:nth-child(1) {
+  animation: v4-card-in .78s .16s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .question-side > *:nth-child(2),
+.slidev-layout .objective-grid > *:nth-child(2),
+.slidev-layout .materials-list--large > *:nth-child(2),
+.slidev-layout .concept-grid > *:nth-child(2),
+.slidev-layout .process-five > *:nth-child(2),
+.slidev-layout .source-notes-grid > *:nth-child(2),
+.slidev-layout .evaluation-grid > *:nth-child(2),
+.slidev-layout .application-strip > *:nth-child(2),
+.slidev-layout .molecule-explain > *:nth-child(2) {
+  animation: v4-card-in .78s .36s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .question-side > *:nth-child(3),
+.slidev-layout .objective-grid > *:nth-child(3),
+.slidev-layout .process-five > *:nth-child(3),
+.slidev-layout .evaluation-grid > *:nth-child(3),
+.slidev-layout .application-strip > *:nth-child(3),
+.slidev-layout .molecule-explain > *:nth-child(3) {
+  animation: v4-card-in .78s .56s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .materials-list--large > *:nth-child(3),
+.slidev-layout .process-five > *:nth-child(4),
+.slidev-layout .source-notes-grid > *:nth-child(4),
+.slidev-layout .application-strip > *:nth-child(4) {
+  animation: v4-card-in .78s .76s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .materials-list--large > *:nth-child(4),
+.slidev-layout .process-five > *:nth-child(5),
+.slidev-layout .source-notes-grid > *:nth-child(5) {
+  animation: v4-card-in .78s .96s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .materials-list--large > *:nth-child(5) {
+  animation: v4-card-in .78s 1.16s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .materials-list--large > *:nth-child(6) {
+  animation: v4-card-in .78s 1.36s cubic-bezier(.2,.78,.2,1) both;
+}
+
+/* More noticeable science-specific motion. */
+.slidev-layout .reaction-equation > * {
+  animation: v4-card-in .7s .28s both;
+}
+.slidev-layout .reaction-equation .reaction-arrow {
+  animation: v4-soft-glow 2.8s 1.1s ease-in-out infinite;
+}
+.slidev-layout .molecule-tail span:nth-child(1) { animation: v4-tail-draw .38s .22s both; }
+.slidev-layout .molecule-tail span:nth-child(2) { animation: v4-tail-draw .38s .34s both; }
+.slidev-layout .molecule-tail span:nth-child(3) { animation: v4-tail-draw .38s .46s both; }
+.slidev-layout .molecule-tail span:nth-child(4) { animation: v4-tail-draw .38s .58s both; }
+.slidev-layout .molecule-tail span:nth-child(5) { animation: v4-tail-draw .38s .70s both; }
+.slidev-layout .molecule-head { animation: v4-mascot-arrive .62s .82s both; }
+
+/* Photo-led slides: real photos enter as a larger focal point. */
+.slidev-layout .photo-detail-layout > * {
+  animation: v4-photo-in .9s .22s cubic-bezier(.2,.78,.2,1) both;
+}
+.slidev-layout .materials-evidence-layout > * {
+  animation: v4-photo-in .9s .18s cubic-bezier(.2,.78,.2,1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respect the user's explicit request for motion, but tone down continuous movement. */
+  .slidev-layout .cover-mascot,
+  .slidev-layout .closing-mascot,
+  .slidev-layout .cover-visual::before,
+  .slidev-layout .cover-visual::after,
+  .slidev-layout .reaction-arrow {
+    animation-duration: 12s !important;
+  }
+}
+
+
+/* ==========================================================
+   V5 FIX — prevent overflow on slides 8 and 10–12
+   Keep the original layout and content; constrain only the
+   media frame and photo evidence area to the 16:9 safe zone.
+   ========================================================== */
+
+/* Slide 8 — video page: smaller, centered 16:9 stage with room
+   for the heading, description, and footer inside the slide. */
+.slidev-layout:has(.video-slide-content) {
+  padding: 1.15rem 2rem .85rem !important;
+}
+.slidev-layout:has(.video-slide-content) > h1 {
+  margin: 0 0 .3rem;
+  font-size: 2.25rem;
+  line-height: 1.05;
+}
+.slidev-layout .video-slide-content {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  min-height: 0;
+  width: 100%;
+}
+.slidev-layout .video-slide-content > .section-lead {
+  margin: 0 0 .1rem;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.slidev-layout .video-slide-content > .fullscreen-video-card {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+  padding: .55rem .72rem .6rem;
+  gap: .42rem;
+}
+.slidev-layout .video-slide-content .fullscreen-video-card__topline {
+  min-height: 1.5rem;
+}
+.slidev-layout .video-slide-content .fullscreen-video-card__stage {
+  width: min(100%, calc(42vh * 16 / 9));
+  max-width: min(100%, calc(42vh * 16 / 9));
+  max-height: 42vh;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+.slidev-layout .video-slide-content .fullscreen-video-card__footer {
+  align-items: center;
+  gap: .55rem;
+  min-width: 0;
+}
+.slidev-layout .video-slide-content .film-caption strong {
+  font-size: .88rem;
+}
+.slidev-layout .video-slide-content .film-caption span {
+  font-size: .72rem;
+  line-height: 1.2;
+}
+.slidev-layout .video-slide-content .fullscreen-video-card__button {
+  padding: .55rem .78rem;
+  font-size: .74rem;
+}
+.slidev-layout .video-slide-content > .bottom-note {
+  margin-top: .08rem;
+  font-size: .7rem;
+  line-height: 1.2;
+}
+
+/* Slides 10, 11, 12 — photo evidence: cap the large frame so
+   the image, observation card, and bottom caption stay in view. */
+.slidev-layout:has(.photo-detail-layout) {
+  padding: 1.15rem 2rem .85rem !important;
+}
+.slidev-layout:has(.photo-detail-layout) > h1 {
+  margin: 0 0 .3rem;
+  font-size: 2.3rem;
+  line-height: 1.05;
+}
+.slidev-layout:has(.photo-detail-layout) > .section-lead {
+  margin: 0 0 .55rem;
+  font-size: 1rem;
+  line-height: 1.28;
+}
+.slidev-layout .photo-detail-layout {
+  min-height: 0;
+  height: 21rem;
+  grid-template-columns: minmax(0, 1.62fr) minmax(14rem, .78fr);
+  gap: .85rem;
+}
+.slidev-layout .photo-detail-layout > .photo-frame {
+  min-height: 0;
+  height: 21rem;
+  padding: .55rem .62rem .48rem;
+  transform: none;
+}
+.slidev-layout .photo-detail-layout > .photo-frame .photo-frame__image-wrap {
+  min-height: 0 !important;
+  height: auto;
+  flex: 1 1 auto;
+  aspect-ratio: auto !important;
+}
+.slidev-layout .photo-detail-layout > .photo-frame .photo-frame__image {
+  min-height: 0;
+  height: 100%;
+}
+.slidev-layout .photo-detail-layout .photo-observation {
+  min-height: 0;
+  padding: .72rem .82rem;
+  overflow: hidden;
+}
+.slidev-layout .photo-detail-layout .photo-observation h2 {
+  margin: .35rem 0 .45rem;
+  font-size: 1.22rem;
+}
+.slidev-layout .photo-detail-layout .photo-observation ul {
+  gap: .3rem;
+  margin: .05rem 0 .35rem;
+}
+.slidev-layout .photo-detail-layout .photo-observation li {
+  padding: .34rem .55rem .34rem 1.55rem;
+  font-size: .86rem;
+}
+.slidev-layout .photo-detail-layout .photo-observation p {
+  margin-top: .2rem;
+  font-size: .78rem;
+  line-height: 1.28;
+}
+.slidev-layout .photo-detail-layout--final > .photo-frame {
+  height: 21rem;
+}
+.slidev-layout .photo-detail-layout--final .result-observation {
+  padding: .55rem .72rem;
+}
+.slidev-layout .photo-detail-layout--final .result-line {
+  padding: .31rem 0;
+}
+.slidev-layout .photo-detail-layout--final .result-line b {
+  font-size: .85rem;
+  line-height: 1.15;
+}
+.slidev-layout .photo-detail-layout--final .result-line span {
+  font-size: .72rem;
+  line-height: 1.15;
+}
+.slidev-layout:has(.photo-detail-layout) > .bottom-note {
+  margin-top: .35rem;
+  font-size: .7rem;
+  line-height: 1.2;
+}
+
+/* Final slide — reserve a safe column for the mascot and avoid
+   letting the decorative image overlap the title or takeaways. */
+.slidev-layout .closing-slide {
+  min-height: 0;
+  height: 100%;
+  padding: 1rem 1.2rem .85rem;
+  justify-content: center;
+}
+.slidev-layout .closing-mascot {
+  width: 7.2rem;
+  max-width: 18%;
+  right: 1rem;
+  top: .65rem;
+  object-fit: contain;
+}
+.slidev-layout .closing-slide > .eyebrow,
+.slidev-layout .closing-slide > h1,
+.slidev-layout .closing-slide > .closing-takeaways,
+.slidev-layout .closing-slide > .cover-rule,
+.slidev-layout .closing-slide > h2,
+.slidev-layout .closing-slide > .closing-meta {
+  max-width: calc(100% - 8.4rem);
+}
+.slidev-layout .closing-slide h1 {
+  font-size: 3.2rem;
+  line-height: 1.0;
+  margin: .55rem 0 .55rem;
+}
+.slidev-layout .closing-takeaways {
+  margin-top: .2rem;
+  gap: .28rem;
+}
+.slidev-layout .closing-takeaways > div {
+  padding: .3rem 0;
+}
+.slidev-layout .closing-takeaways span {
+  font-size: .98rem;
+  line-height: 1.22;
+}
+.slidev-layout .closing-slide h2 {
+  margin-top: .35rem;
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+.slidev-layout .closing-slide .cover-rule {
+  margin: .55rem 0;
+}
+
+@media (max-height: 650px) {
+  .slidev-layout:has(.video-slide-content),
+  .slidev-layout:has(.photo-detail-layout) {
+    padding-top: .85rem !important;
+    padding-bottom: .65rem !important;
+  }
+  .slidev-layout .video-slide-content .fullscreen-video-card__stage {
+    width: min(100%, calc(38vh * 16 / 9));
+    max-width: min(100%, calc(38vh * 16 / 9));
+    max-height: 38vh;
+  }
+  .slidev-layout .photo-detail-layout,
+  .slidev-layout .photo-detail-layout > .photo-frame,
+  .slidev-layout .photo-detail-layout--final > .photo-frame {
+    height: 18.5rem;
+  }
+}
+
+
+/* Stable image rendering: SVG files are served as ordinary public assets. */
+.slidev-layout .cover-mascot,
+.slidev-layout .closing-mascot,
+.slidev-layout .coconut-illustration {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+.slidev-layout .cover-mascot { width: 9.2rem; }
+.slidev-layout .closing-mascot { width: 7.2rem; max-width: 18%; }
+
+
+/* ==========================================================
+   LIQUID GLASS — SOAP'S LITTLE WORLD
+   Visual-only overrides.
+   Preserve slide content, layout geometry and global effects.
+   ========================================================== */
+
+:root {
+  --soap-glass-text: #153d5b;
+  --soap-glass-muted: #426782;
+  --soap-glass-blue: #55b9e9;
+  --soap-glass-line: rgba(255, 255, 255, 0.78);
+  --soap-glass-shadow: rgba(37, 105, 148, 0.13);
+}
+
+/* 1. Nền xanh băng và ánh sáng nền */
+.slidev-layout {
+  background:
+    radial-gradient(
+      ellipse at 12% 10%,
+      rgba(255, 255, 255, 0.95),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 88% 85%,
+      rgba(143, 215, 248, 0.34),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #eaf8ff 0%,
+      #dcefff 48%,
+      #f4fbff 100%
+    );
+
+  color: var(--soap-glass-text);
+}
+
+/* 2. Tiêu đề */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  color: #174568;
+}
+
+.slidev-layout h1 {
+  text-shadow: 0 2px 12px rgba(255, 255, 255, 0.65);
+}
+
+.slidev-layout h1::after {
+  background: linear-gradient(
+    90deg,
+    #57c5ed,
+    #a9e5fa,
+    #d5c9ff
+  );
+}
+
+/* 3. Bề mặt kính chính */
+.slidev-layout .question-main,
+.slidev-layout .info-card,
+.slidev-layout .material-primary,
+.slidev-layout .reaction-panel,
+.slidev-layout .molecule-card,
+.slidev-layout .explain-row,
+.slidev-layout .result-observations,
+.slidev-layout .evaluation-card,
+.slidev-layout .source-note-card,
+.slidev-layout .photo-observation,
+.slidev-layout .process-stage,
+.slidev-layout .process-observation,
+.slidev-layout .coconut-ingredient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.76),
+    rgba(235, 248, 255, 0.48)
+  );
+
+  border: 1px solid var(--soap-glass-line);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 8px 24px var(--soap-glass-shadow);
+
+  backdrop-filter: blur(16px) saturate(145%);
+  -webkit-backdrop-filter: blur(16px) saturate(145%);
+}
+
+/* 4. Viền kính và độ nổi */
+.slidev-layout .question-main,
+.slidev-layout .info-card,
+.slidev-layout .material-primary,
+.slidev-layout .reaction-panel,
+.slidev-layout .molecule-card,
+.slidev-layout .result-observations,
+.slidev-layout .evaluation-card,
+.slidev-layout .source-note-card {
+  border-radius: 1.2rem;
+}
+
+/* 5. Các thẻ nhỏ */
+.slidev-layout .mini-stat,
+.slidev-layout .material-row,
+.slidev-layout .application-strip > div,
+.slidev-layout .closing-takeaways > div {
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 5px 16px rgba(44, 115, 157, 0.08);
+
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+}
+
+/* 6. Thẻ nhấn mạnh */
+.slidev-layout .accent-card,
+.slidev-layout .highlight-explain,
+.slidev-layout .source-note-card.patience-note {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(206, 238, 255, 0.62)
+  );
+
+  border-color: rgba(112, 198, 237, 0.62);
+}
+
+/* 7. Màu chữ */
+.slidev-layout .section-lead,
+.slidev-layout .bottom-note,
+.slidev-layout .question-main p,
+.slidev-layout .info-card p,
+.slidev-layout .material-primary p,
+.slidev-layout .material-row span,
+.slidev-layout .explain-row p,
+.slidev-layout .source-note-card p,
+.slidev-layout .evaluation-card p,
+.slidev-layout .closing-takeaways span {
+  color: var(--soap-glass-muted);
+}
+
+/* 8. Màu nhấn */
+.slidev-layout .eyebrow,
+.slidev-layout .card-number,
+.slidev-layout .source-note-number,
+.slidev-layout .result-heading,
+.slidev-layout .material-row b,
+.slidev-layout .mini-stat strong,
+.slidev-layout .closing-takeaways b {
+  color: #1689c2;
+}
+
+.slidev-layout .cover-rule {
+  background: linear-gradient(
+    90deg,
+    #50bce9,
+    #a8e2f8,
+    #c8bfff
+  );
+}
+
+/* 9. Ảnh và khung ảnh */
+.slidev-layout .cover-visual,
+.slidev-layout .photo-slot,
+.slidev-layout .result-photo-slot {
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 10px 25px rgba(37, 105, 148, 0.1);
+
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+}
+
+/* 10. Loại bỏ chi tiết scrapbook */
+.slidev-layout .scrapbook-card::before,
+.slidev-layout .scrapbook-note::before {
+  display: none;
+}
+
+.slidev-layout .objective-grid .info-card,
+.slidev-layout .evidence-card {
+  transform: none;
+}
+
+/* 11. Trang bìa và trang kết */
+.slidev-layout .report-cover,
+.slidev-layout .closing-slide {
+  background: linear-gradient(
+    135deg,
+    rgba(210, 239, 255, 0.78),
+    rgba(255, 255, 255, 0.56)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 12px 32px rgba(37, 105, 148, 0.12);
+
+  backdrop-filter: blur(14px) saturate(145%);
+  -webkit-backdrop-filter: blur(14px) saturate(145%);
+}
+
+/* 12. Giảm trang trí kiểu scrapbook */
+.slidev-layout::before,
+.slidev-layout::after {
+  content: none;
+}
+
+/* 13. Tôn trọng thiết lập giảm chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  .slidev-layout .info-card,
+  .slidev-layout .material-row,
+  .slidev-layout .concept-item,
+  .slidev-layout .process-stage,
+  .slidev-layout .source-note-card,
+  .slidev-layout .evaluation-card,
+  .slidev-layout .mini-stat,
+  .slidev-layout .question-main,
+  .slidev-layout .reaction-panel,
+  .slidev-layout .molecule-card,
+  .slidev-layout .explain-row,
+  .slidev-layout .application-strip > div,
+  .slidev-layout .closing-takeaways > div,
+  .slidev-layout .process-observation,
+  .slidev-layout .safety-callout {
+    animation: none !important;
+  }
+}
+
+
+/* FIX: Khôi phục nền xanh cho slide bìa */
+.slidev-layout:has(.report-cover) {
+  background:
+    radial-gradient(
+      ellipse at 12% 10%,
+      rgba(255, 255, 255, 0.95),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 88% 85%,
+      rgba(143, 215, 248, 0.34),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #eaf8ff 0%,
+      #dcefff 48%,
+      #f4fbff 100%
+    ) !important;
+}
+
+.slidev-layout .report-cover {
+  background: linear-gradient(
+    135deg,
+    rgba(210, 239, 255, 0.78),
+    rgba(255, 255, 255, 0.56)
+  ) !important;
+}
+
+/* LIQUID GLASS — loại bỏ băng keo Scrapbook */
+.slidev-layout .scrapbook-card::before,
+.slidev-layout .scrapbook-note::before {
+  display: none !important;
+}
+/* =====================================================
+   V6 — ENHANCED LIQUID GLASS MOTION
+   Tăng độ rõ của chuyển động, giữ nguyên bố cục.
+   ===================================================== */
+
+/* Tiêu đề xuất hiện rõ ràng hơn */
+@keyframes glass-title-enter {
+  0% {
+    opacity: 0;
+    translate: 0 42px;
+    scale: .96;
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    filter: blur(0);
+  }
+}
+
+/* Thẻ kính xuất hiện có độ nảy nhẹ */
+@keyframes glass-card-enter {
+  0% {
+    opacity: 0;
+    translate: 0 48px;
+    scale: .92;
+    filter: blur(5px);
+  }
+
+  75% {
+    opacity: 1;
+    translate: 0 -5px;
+    scale: 1.015;
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    filter: blur(0);
+  }
+}
+
+/* Hình ảnh xuất hiện từ bên cạnh */
+@keyframes glass-photo-enter {
+  0% {
+    opacity: 0;
+    translate: 42px 0;
+    scale: .94;
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    filter: blur(0);
+  }
+}
+
+/* Tiêu đề */
+.slidev-layout > h1 {
+  animation: glass-title-enter
+    1s cubic-bezier(.16, 1, .3, 1) both !important;
+}
+
+.slidev-layout > .section-lead {
+  animation: glass-title-enter
+    1s .18s cubic-bezier(.16, 1, .3, 1) both !important;
+}
+
+/* Các thẻ nội dung */
+.slidev-layout .question-main,
+.slidev-layout .reaction-panel,
+.slidev-layout .molecule-card,
+.slidev-layout .materials-evidence-copy,
+.slidev-layout .photo-observation,
+.slidev-layout .process-observation,
+.slidev-layout .safety-callout {
+  animation: glass-card-enter
+    1s .2s cubic-bezier(.16, 1, .3, 1) both !important;
+}
+
+/* Thẻ xuất hiện lần lượt */
+.slidev-layout .question-side > *,
+.slidev-layout .objective-grid > *,
+.slidev-layout .materials-list--large > *,
+.slidev-layout .concept-grid > *,
+.slidev-layout .process-five > *,
+.slidev-layout .source-notes-grid > *,
+.slidev-layout .evaluation-grid > *,
+.slidev-layout .application-strip > *,
+.slidev-layout .molecule-explain > * {
+  animation: glass-card-enter
+    1s cubic-bezier(.16, 1, .3, 1) both !important;
+}
+
+.slidev-layout .question-side > *:nth-child(1),
+.slidev-layout .objective-grid > *:nth-child(1),
+.slidev-layout .materials-list--large > *:nth-child(1),
+.slidev-layout .concept-grid > *:nth-child(1),
+.slidev-layout .process-five > *:nth-child(1) {
+  animation-delay: .2s !important;
+}
+
+.slidev-layout .question-side > *:nth-child(2),
+.slidev-layout .objective-grid > *:nth-child(2),
+.slidev-layout .materials-list--large > *:nth-child(2),
+.slidev-layout .concept-grid > *:nth-child(2),
+.slidev-layout .process-five > *:nth-child(2) {
+  animation-delay: .38s !important;
+}
+
+.slidev-layout .question-side > *:nth-child(3),
+.slidev-layout .objective-grid > *:nth-child(3),
+.slidev-layout .materials-list--large > *:nth-child(3),
+.slidev-layout .concept-grid > *:nth-child(3),
+.slidev-layout .process-five > *:nth-child(3) {
+  animation-delay: .56s !important;
+}
+
+.slidev-layout .process-five > *:nth-child(4),
+.slidev-layout .materials-list--large > *:nth-child(4) {
+  animation-delay: .74s !important;
+}
+
+.slidev-layout .process-five > *:nth-child(5),
+.slidev-layout .materials-list--large > *:nth-child(5) {
+  animation-delay: .92s !important;
+}
+
+.slidev-layout .materials-list--large > *:nth-child(6) {
+  animation-delay: 1.1s !important;
+}
+
+/* Hình ảnh */
+.slidev-layout .photo-detail-layout > *,
+.slidev-layout .materials-evidence-layout > * {
+  animation: glass-photo-enter
+    1.1s .25s cubic-bezier(.16, 1, .3, 1) both !important;
+}
+
+/* =====================================================
+   V7 — PHOTO SLIDES: FIT FRAME + READABLE TYPOGRAPHY
+   Áp dụng riêng cho slide 10, 11, 12.
+   ===================================================== */
+
+/* Tăng chiều cao toàn bộ khu vực ảnh và thẻ quan sát */
+.slidev-layout .photo-detail-layout {
+  height: 25rem !important;
+  min-height: 0 !important;
+  grid-template-columns: minmax(0, 1.62fr) minmax(14rem, .78fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Khung ảnh chiếm trọn chiều cao */
+.slidev-layout .photo-detail-layout > .photo-frame {
+  height: 25rem !important;
+  min-height: 0 !important;
+  display: flex;
+  flex-direction: column;
+  padding: .65rem;
+  transform: none;
+}
+
+/* Ảnh lấp đầy phần diện tích bên trong khung */
+.slidev-layout .photo-detail-layout > .photo-frame .photo-frame__image-wrap {
+  flex: 1 1 auto;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  overflow: hidden;
+}
+
+.slidev-layout .photo-detail-layout > .photo-frame .photo-frame__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Thẻ quan sát cao bằng khung ảnh */
+.slidev-layout .photo-detail-layout .photo-observation {
+  height: 25rem !important;
+  min-height: 0 !important;
+  padding: 1.15rem 1.2rem;
+  justify-content: center;
+  overflow: auto;
+}
+
+/* Tiêu đề trong thẻ quan sát */
+.slidev-layout .photo-detail-layout .observation-kicker {
+  font-size: 1.05rem;
+  letter-spacing: .12rem;
+}
+
+.slidev-layout .photo-detail-layout .photo-observation h2 {
+  font-size: 1.55rem !important;
+  line-height: 1.25;
+  margin: .65rem 0 .8rem;
+}
+
+/* Các dòng ghi nhận */
+.slidev-layout .photo-detail-layout .photo-observation li {
+  font-size: 1.12rem !important;
+  line-height: 1.4;
+  padding: .65rem .7rem .65rem 1.9rem;
+}
+
+.slidev-layout .photo-detail-layout .photo-observation p {
+  font-size: 1rem !important;
+  line-height: 1.5;
+  margin-top: .55rem;
+}
+
+/* Slide 12: tăng cỡ chữ bảng thông tin sản phẩm */
+.slidev-layout .photo-detail-layout--final .result-observation {
+  padding: .9rem 1rem;
+}
+
+.slidev-layout .photo-detail-layout--final .result-line {
+  padding: .55rem 0;
+}
+
+.slidev-layout .photo-detail-layout--final .result-line b {
+  font-size: 1.12rem !important;
+  line-height: 1.3;
+}
+
+.slidev-layout .photo-detail-layout--final .result-line span {
+  font-size: .98rem !important;
+  line-height: 1.35;
+}
+
+/* Chú thích dưới khung ảnh */
+.slidev-layout:has(.photo-detail-layout) > .bottom-note {
+  font-size: .9rem !important;
+  line-height: 1.35;
+  margin-top: .45rem;
+}
+
+/* Màn hình thấp: tránh khung ảnh tràn khỏi slide */
+@media (max-height: 650px) {
+  .slidev-layout .photo-detail-layout,
+  .slidev-layout .photo-detail-layout > .photo-frame,
+  .slidev-layout .photo-detail-layout .photo-observation {
+    height: 22rem !important;
+  }
+}
+
+/* V7 FIX — Kéo dài khung, loại bỏ thanh cuộn */
+
+.slidev-layout .photo-detail-layout {
+  height: 29rem !important;
+}
+
+.slidev-layout .photo-detail-layout > .photo-frame {
+  height: 29rem !important;
+}
+
+.slidev-layout .photo-detail-layout .photo-observation {
+  height: 29rem !important;
+  overflow: visible !important;
+  overflow-y: visible !important;
+  overflow-x: visible !important;
+  box-sizing: border-box;
+}
+
+/* Slide 12 */
+.slidev-layout .photo-detail-layout--final > .photo-frame {
+  height: 29rem !important;
+}
+
+@media (max-height: 650px) {
+  .slidev-layout .photo-detail-layout,
+  .slidev-layout .photo-detail-layout > .photo-frame,
+  .slidev-layout .photo-detail-layout .photo-observation {
+    height: 25rem !important;
+  }
+}
+
+/* LIQUID GLASS — TOP EDGE LIGHT SWEEP */
+
+.slide-left-enter-active {
+  position: relative;
+}
+
+.slide-left-enter-active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 99999;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(155, 215, 255, 0.7) 56%,
+    transparent 68%
+  );
+
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: liquid-glass-edge-sweep 0.9s ease-out both;
+}
+
+@keyframes liquid-glass-edge-sweep {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 0% 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "soap-little-world-slidev",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open slides.md",
+    "build": "slidev build --base /xa-phong/",
+    "export": "slidev export slides.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.11.5",
+    "@slidev/theme-seriph": "^0.25.0"
+  }
+}
