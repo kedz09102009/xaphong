@@ -196,7 +196,7 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
 
 <div class="video-slide-content">
   <div class="section-lead">Theo dõi video ghi lại quá trình thực hành thực tế của nhóm.</div>
-  <FullscreenVideo src="videos/quy-trinh-thuc-hanh.mp4" />
+  <FullscreenVideo src="quy-trinh-thuc-hanh.mov" />
 </div>
 
 ---
