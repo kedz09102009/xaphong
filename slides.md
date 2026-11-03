@@ -279,7 +279,7 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
 
 <div class="video-slide-content">
   <div class="section-lead">Theo dõi video ghi lại quá trình thực hành thực tế của nhóm.</div>
-  <div style="display: flex; justify-content: center; margin-top: 20px;">
+  <div style="display: flex; justify-content: center; margin-top: 10px;">
     <iframe 
       width="100%" 
       height="450" 
