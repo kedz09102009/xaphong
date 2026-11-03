@@ -279,7 +279,17 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
 
 <div class="video-slide-content">
   <div class="section-lead">Theo dõi video ghi lại quá trình thực hành thực tế của nhóm.</div>
-  <FullscreenVideo src="quy-trinh-thuc-hanh.mov" />
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <iframe 
+      width="100%" 
+      height="450" 
+      src="https://www.youtube.com/embed/vDpOIrB7JR8" 
+      title="Video quy trình thực hành" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
 
 
