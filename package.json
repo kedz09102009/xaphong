@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "slidev --open slides.md",
-    "build": "slidev build --base /xa-phong/",
+    "build": "slidev build --base /xaphong/",
     "export": "slidev export slides.md"
   },
   "devDependencies": {
