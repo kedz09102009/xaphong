@@ -8,6 +8,7 @@ mdc: true
 ---
 
 <script setup>
+
 import PhotoFrame from './components/PhotoFrame.vue'
 import FullscreenVideo from './components/FullscreenVideo.vue'
 </script>
@@ -24,12 +25,9 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
     <img class="cover-mascot" src="/stickers/mascot-soap.svg" alt="Nhân vật Soap" />
     <img
       class="real-product-photo"
-      src="/photos/anh.jpg"
+      src="/public/photos/anh.jpg"
       alt="Nguyên liệu và dụng cụ làm xà phòng"
     />
-    <div class="visual-caption">
-      NGUYÊN LIỆU VÀ DỤNG CỤ THỰC HÀNH
-    </div>
   </div>
 </div>
 
@@ -192,14 +190,7 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
 
 ---
 
-# Video quy trình thực hành
 
-<div class="video-slide-content">
-  <div class="section-lead">Theo dõi video ghi lại quá trình thực hành thực tế của nhóm.</div>
-  <FullscreenVideo src="quy-trinh-thuc-hanh.mov" />
-</div>
-
----
 
 # Một số lưu ý
 
@@ -272,13 +263,23 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
   />
   <aside class="photo-observation result-observation scrapbook-note">
     <span class="observation-kicker">GHI NHẬN THỰC TẾ</span>
-    <div class="result-line"><b>Hình dạng</b><span>[Điền theo sản phẩm]</span></div>
-    <div class="result-line"><b>Màu sắc</b><span>[Điền theo sản phẩm]</span></div>
-    <div class="result-line"><b>Mùi hương</b><span>[Điền nếu có]</span></div>
-    <div class="result-line"><b>Trạng thái</b><span>[Điền theo quan sát]</span></div>
-    <div class="result-line"><b>Điểm nổi bật</b><span>[Điều nhóm hài lòng nhất]</span></div>
+    <div class="result-line"><b>Hình dạng</b><span>Hình hộp chữ nhật</span></div>
+    <div class="result-line"><b>Màu sắc</b><span>Hồng tím</span></div>
+    <div class="result-line"><b>Mùi hương</b><span>Mùi trà trắng</span></div>
+    <div class="result-line"><b>Trạng thái</b><span>Rắn</span></div>
+    <div class="result-line"><b>Điểm nổi bật</b><span>Đẹp xuất sắc</span></div>
   </aside>
 </div>
+
+---
+
+# Video quy trình thực hành
+
+<div class="video-slide-content">
+  <div class="section-lead">Theo dõi video ghi lại quá trình thực hành thực tế của nhóm.</div>
+  <FullscreenVideo src="quy-trinh-thuc-hanh.mov" />
+</div>
+
 
 ---
 
