@@ -279,17 +279,13 @@ import FullscreenVideo from './components/FullscreenVideo.vue'
 
 <div class="video-slide-content">
   <div class="section-lead">Theo dõi video ghi lại quá trình thực hành thực tế của nhóm.</div>
-  <div style="display: flex; justify-content: center; margin-top: 10px;">
-    <iframe 
-      width="100%" 
-      height="450" 
-      src="https://www.youtube.com/embed/vDpOIrB7JR8" 
-      title="Video quy trình thực hành" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 350px; gap: 20px;">
+  <p style="font-size: 1.1rem; opacity: 0.8;">Video ghi lại quá trình thực hành thực tế của nhóm:</p>
+  
+  <a href="https://youtu.be/vDpOIrB7JR8" target="_blank" style="padding: 14px 28px; background-color: #ff0000; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    ▶ Bấm để xem video thực tế trên YouTube
+  </a>
+</div>
 </div>
 
 
